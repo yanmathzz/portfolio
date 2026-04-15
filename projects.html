@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projetos de Yan Matheus — desenvolvedor e engenheiro de infraestrutura." />
+  <title>Projects — Yan Matheus</title>
+  <script>(function(){var s=localStorage.getItem('isDarkMode');document.documentElement.classList.toggle('dark',s!==null?s==='true':true)})()</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={darkMode:'class'}</script>
+  <style>
+    body{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:#080a0f}
+    #galaxy{position:fixed;inset:0;z-index:0;pointer-events:none;width:100%;height:100%}
+    .card-hover{transition:background 0.2s,transform 0.2s}
+    @keyframes bounce-arrow{0%,100%{transform:translateY(0) translateX(-50%)}50%{transform:translateY(6px) translateX(-50%)}}
+    .bounce-arrow{animation:bounce-arrow 1.8s ease-in-out infinite}
+    @media(prefers-reduced-motion:reduce){#galaxy{display:none}*,*::before,*::after{transition-duration:0ms!important;animation:none!important}.bounce-arrow{animation:none}}
+  </style>
+</head>
+<body class="antialiased text-zinc-100">
+
+<canvas id="galaxy"></canvas>
+
+<!-- ════ NAV ════ -->
+<header class="fixed top-0 inset-x-0 z-50 pointer-events-none">
+  <div class="pt-6 sm:px-8">
+    <div class="mx-auto max-w-7xl lg:px-8">
+      <div class="relative px-4 sm:px-8 lg:px-12">
+        <div class="mx-auto max-w-2xl lg:max-w-5xl">
+          <div class="flex items-center justify-between gap-4">
+
+            <a href="./index.html" class="pointer-events-auto group" aria-label="Início">
+              <div class="h-10 w-10 rounded-full ring-2 ring-white/10 shadow-md bg-zinc-800 overflow-hidden flex items-center justify-center transition-all group-hover:ring-teal-500/40">
+                <img src="./images/perfil.jpg" alt="Yan Matheus" class="site-avatar-image h-full w-full object-cover"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+                <span style="display:none" class="text-xs font-bold text-zinc-300 w-full h-full items-center justify-center">YM</span>
+              </div>
+            </a>
+
+            <nav class="pointer-events-auto">
+              <ul class="flex items-center rounded-full bg-zinc-900/80 px-1.5 sm:px-3 text-xs sm:text-sm font-medium text-zinc-300 shadow-lg shadow-black/20 ring-1 ring-white/10 backdrop-blur-md">
+                <li><a href="./about.html"    class="block px-2.5 py-2 sm:px-3 transition hover:text-teal-400">About</a></li>
+                <li><a href="./articles.html" class="block px-2.5 py-2 sm:px-3 transition hover:text-teal-400 hidden sm:block">Articles</a></li>
+                <li><a href="./projects.html" class="block px-2.5 py-2 sm:px-3 text-teal-400">Projects</a></li>
+                <li><a href="./uses.html"     class="block px-2.5 py-2 sm:px-3 transition hover:text-teal-400 hidden sm:block">Uses</a></li>
+                <li><a href="./hire.html"     class="block px-2.5 py-2 sm:px-3 transition hover:text-teal-400">Hire</a></li>
+              </ul>
+            </nav>
+
+            <!-- Back to home shortcut -->
+            <a href="./index.html" aria-label="Voltar ao início"
+              class="pointer-events-auto flex h-9 w-9 items-center justify-center rounded-full bg-zinc-900/80 shadow-lg shadow-black/20 ring-1 ring-white/10 backdrop-blur-md transition-colors hover:bg-zinc-800">
+              <svg class="h-4 w-4 stroke-zinc-400" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+              </svg>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ════ HERO ════ -->
+<section class="relative z-10 flex min-h-screen flex-col items-center justify-center text-center px-4">
+  <p class="mb-5 flex flex-wrap items-center justify-center gap-2 text-xs font-semibold uppercase tracking-widest text-zinc-500">
+    <span>Meu portfólio de projetos</span>
+    <span class="text-zinc-700">·</span>
+    <a href="https://github.com/yanmathzz" target="_blank" rel="noopener noreferrer"
+      class="flex items-center gap-1 text-teal-400 transition-colors hover:text-teal-300">
+      Ver no GitHub
+      <svg viewBox="0 0 16 16" fill="none" class="h-3 w-3 stroke-current" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3.75 8h8.5M8 3.75 12.25 8 8 12.25"/>
+      </svg>
+    </a>
+  </p>
+
+  <h1 class="max-w-4xl text-5xl font-extrabold leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl">
+    Coisas que construí para<br class="hidden sm:block" /> colocar minha marca no universo.
+  </h1>
+
+  <p class="mt-6 max-w-lg text-base leading-relaxed text-zinc-400">
+    Ao longo dos anos trabalhei em automação, infraestrutura e desenvolvimento full stack.
+    Aqui estão os projetos dos quais mais me orgulho — alguns open source, outros experimentais.
+  </p>
+
+  <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+    <a href="#projects"
+      class="rounded-full border border-white/15 bg-white/5 px-7 py-2.5 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/10">
+      Ver todos os projetos
+    </a>
+    <a href="https://github.com/yanmathzz" target="_blank" rel="noopener noreferrer"
+      class="flex items-center gap-2 rounded-full bg-zinc-100 px-7 py-2.5 text-sm font-semibold text-zinc-900 transition-colors hover:bg-white">
+      <svg viewBox="0 0 24 24" class="h-4 w-4 fill-zinc-900" aria-hidden="true">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.475 2 2 6.588 2 12.253c0 4.537 2.862 8.369 6.838 9.727.5.09.687-.218.687-.487 0-.243-.013-1.05-.013-1.91C7 20.059 6.35 18.957 6.15 18.38c-.113-.295-.6-1.205-1.025-1.448-.35-.192-.85-.667-.013-.68.788-.012 1.35.744 1.538 1.051.9 1.551 2.338 1.116 2.912.846.088-.666.35-1.115.638-1.371-2.225-.256-4.55-1.14-4.55-5.062 0-1.115.387-2.038 1.025-2.756-.1-.256-.45-1.307.1-2.717 0 0 .837-.269 2.75 1.051.8-.23 1.65-.346 2.5-.346.85 0 1.7.115 2.5.346 1.912-1.333 2.75-1.05 2.75-1.05.55 1.409.2 2.46.1 2.716.637.718 1.025 1.628 1.025 2.756 0 3.934-2.337 4.806-4.562 5.062.362.32.675.936.675 1.897 0 1.371-.013 2.473-.013 2.82 0 .268.188.589.688.486a10.039 10.039 0 0 0 4.932-3.74A10.447 10.447 0 0 0 22 12.253C22 6.588 17.525 2 12 2Z"/>
+      </svg>
+      GitHub
+    </a>
+  </div>
+
+  <!-- Scroll hint -->
+  <div class="bounce-arrow absolute bottom-10 left-1/2">
+    <svg class="h-6 w-6 text-zinc-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M19 9l-7 7-7-7"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ════ PROJECTS GRID ════ -->
+<div id="projects" class="relative z-10 sm:px-8 pb-32">
+  <div class="mx-auto max-w-7xl lg:px-8">
+    <div class="relative px-4 sm:px-8 lg:px-12">
+      <div class="mx-auto max-w-2xl lg:max-w-5xl">
+
+        <h2 class="mb-12 text-sm font-semibold uppercase tracking-widest text-zinc-500">Projetos</h2>
+
+        <ul class="grid grid-cols-1 gap-x-10 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+
+          <!-- inkpad -->
+          <li class="group relative flex flex-col items-start">
+            <a href="https://github.com/yanmathzz/inkpad" target="_blank" rel="noopener noreferrer"
+               class="absolute inset-0 z-20 rounded-2xl cursor-pointer" aria-label="Inkpad — ver no GitHub"></a>
+            <div class="absolute -inset-y-4 -inset-x-4 z-0 rounded-2xl opacity-0 ring-1 ring-white/10 transition group-hover:bg-white/5 group-hover:opacity-100 sm:-inset-x-6"></div>
+            <div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-zinc-800 ring-1 ring-white/10 shadow-md">
+              <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6 stroke-teal-400" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"/>
+              </svg>
+            </div>
+            <h3 class="relative z-10 mt-6 text-base font-semibold text-zinc-100">Inkpad</h3>
+            <p class="relative z-10 mt-2 text-sm text-zinc-400">
+              Editor de notas Markdown para Windows sem banco de dados. Lê arquivos <code class="text-teal-500 text-xs">.md</code> diretamente do sistema de arquivos, com preview em tempo real, busca instantânea, tema escuro e auto-save. Construído com Tauri v2 e Rust.
+            </p>
+            <p class="relative z-10 mt-6 flex items-center text-sm font-medium text-zinc-500 transition group-hover:text-teal-400">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5 flex-none fill-zinc-500 transition group-hover:fill-teal-400"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.475 2 2 6.588 2 12.253c0 4.537 2.862 8.369 6.838 9.727.5.09.687-.218.687-.487 0-.243-.013-1.05-.013-1.91C7 20.059 6.35 18.957 6.15 18.38c-.113-.295-.6-1.205-1.025-1.448-.35-.192-.85-.667-.013-.68.788-.012 1.35.744 1.538 1.051.9 1.551 2.338 1.116 2.912.846.088-.666.35-1.115.638-1.371-2.225-.256-4.55-1.14-4.55-5.062 0-1.115.387-2.038 1.025-2.756-.1-.256-.45-1.307.1-2.717 0 0 .837-.269 2.75 1.051.8-.23 1.65-.346 2.5-.346.85 0 1.7.115 2.5.346 1.912-1.333 2.75-1.05 2.75-1.05.55 1.409.2 2.46.1 2.716.637.718 1.025 1.628 1.025 2.756 0 3.934-2.337 4.806-4.562 5.062.362.32.675.936.675 1.897 0 1.371-.013 2.473-.013 2.82 0 .268.188.589.688.486a10.039 10.039 0 0 0 4.932-3.74A10.447 10.447 0 0 0 22 12.253C22 6.588 17.525 2 12 2Z"/></svg>
+              <span class="ml-2">yanmathzz/inkpad</span>
+            </p>
+          </li>
+
+          <!-- Sistema de Monitoramento -->
+          <li class="group relative flex flex-col items-start">
+            <a href="https://github.com/yanmathzz/Sistema_de_Monitoramento" target="_blank" rel="noopener noreferrer"
+               class="absolute inset-0 z-20 rounded-2xl cursor-pointer" aria-label="Sistema de Monitoramento — ver no GitHub"></a>
+            <div class="absolute -inset-y-4 -inset-x-4 z-0 rounded-2xl opacity-0 ring-1 ring-white/10 transition group-hover:bg-white/5 group-hover:opacity-100 sm:-inset-x-6"></div>
+            <div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-zinc-800 ring-1 ring-white/10 shadow-md">
+              <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6 stroke-teal-400" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"/><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <h3 class="relative z-10 mt-6 text-base font-semibold text-zinc-100">Sistema de Monitoramento</h3>
+            <p class="relative z-10 mt-2 text-sm text-zinc-400">
+              App desktop Python para monitoramento inteligente de pastas. Detecta arquivos novos, modificados e deletados via hash MD5, com interface Tkinter, histórico em SQLite e exportação CSV.
+            </p>
+            <p class="relative z-10 mt-6 flex items-center text-sm font-medium text-zinc-500 transition group-hover:text-teal-400">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5 flex-none fill-zinc-500 transition group-hover:fill-teal-400"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.475 2 2 6.588 2 12.253c0 4.537 2.862 8.369 6.838 9.727.5.09.687-.218.687-.487 0-.243-.013-1.05-.013-1.91C7 20.059 6.35 18.957 6.15 18.38c-.113-.295-.6-1.205-1.025-1.448-.35-.192-.85-.667-.013-.68.788-.012 1.35.744 1.538 1.051.9 1.551 2.338 1.116 2.912.846.088-.666.35-1.115.638-1.371-2.225-.256-4.55-1.14-4.55-5.062 0-1.115.387-2.038 1.025-2.756-.1-.256-.45-1.307.1-2.717 0 0 .837-.269 2.75 1.051.8-.23 1.65-.346 2.5-.346.85 0 1.7.115 2.5.346 1.912-1.333 2.75-1.05 2.75-1.05.55 1.409.2 2.46.1 2.716.637.718 1.025 1.628 1.025 2.756 0 3.934-2.337 4.806-4.562 5.062.362.32.675.936.675 1.897 0 1.371-.013 2.473-.013 2.82 0 .268.188.589.688.486a10.039 10.039 0 0 0 4.932-3.74A10.447 10.447 0 0 0 22 12.253C22 6.588 17.525 2 12 2Z"/></svg>
+              <span class="ml-2">yanmathzz/Sistema_de_Monitoramento</span>
+            </p>
+          </li>
+
+          <!-- TEP Token Vista -->
+          <li class="group relative flex flex-col items-start">
+            <a href="https://github.com/yanmathzz/tep-token-vista" target="_blank" rel="noopener noreferrer"
+               class="absolute inset-0 z-20 rounded-2xl cursor-pointer" aria-label="TEP Token Vista — ver no GitHub"></a>
+            <div class="absolute -inset-y-4 -inset-x-4 z-0 rounded-2xl opacity-0 ring-1 ring-white/10 transition group-hover:bg-white/5 group-hover:opacity-100 sm:-inset-x-6"></div>
+            <div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-zinc-800 ring-1 ring-white/10 shadow-md">
+              <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6 stroke-teal-400" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/>
+              </svg>
+            </div>
+            <h3 class="relative z-10 mt-6 text-base font-semibold text-zinc-100">TEP — Token Vista</h3>
+            <p class="relative z-10 mt-2 text-sm text-zinc-400">
+              Plataforma de tokenização de empresas paraenses que democratiza o acesso ao mercado financeiro regional via blockchain. Dashboard financeiro com TypeScript, Vite e Tailwind CSS.
+            </p>
+            <p class="relative z-10 mt-6 flex items-center text-sm font-medium text-zinc-500 transition group-hover:text-teal-400">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5 flex-none fill-zinc-500 transition group-hover:fill-teal-400"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.475 2 2 6.588 2 12.253c0 4.537 2.862 8.369 6.838 9.727.5.09.687-.218.687-.487 0-.243-.013-1.05-.013-1.91C7 20.059 6.35 18.957 6.15 18.38c-.113-.295-.6-1.205-1.025-1.448-.35-.192-.85-.667-.013-.68.788-.012 1.35.744 1.538 1.051.9 1.551 2.338 1.116 2.912.846.088-.666.35-1.115.638-1.371-2.225-.256-4.55-1.14-4.55-5.062 0-1.115.387-2.038 1.025-2.756-.1-.256-.45-1.307.1-2.717 0 0 .837-.269 2.75 1.051.8-.23 1.65-.346 2.5-.346.85 0 1.7.115 2.5.346 1.912-1.333 2.75-1.05 2.75-1.05.55 1.409.2 2.46.1 2.716.637.718 1.025 1.628 1.025 2.756 0 3.934-2.337 4.806-4.562 5.062.362.32.675.936.675 1.897 0 1.371-.013 2.473-.013 2.82 0 .268.188.589.688.486a10.039 10.039 0 0 0 4.932-3.74A10.447 10.447 0 0 0 22 12.253C22 6.588 17.525 2 12 2Z"/></svg>
+              <span class="ml-2">yanmathzz/tep-token-vista</span>
+            </p>
+          </li>
+
+          <!-- Netflix Clone -->
+          <li class="group relative flex flex-col items-start">
+            <a href="https://github.com/yanmathzz/netflix_clone" target="_blank" rel="noopener noreferrer"
+               class="absolute inset-0 z-20 rounded-2xl cursor-pointer" aria-label="Netflix Clone — ver no GitHub"></a>
+            <div class="absolute -inset-y-4 -inset-x-4 z-0 rounded-2xl opacity-0 ring-1 ring-white/10 transition group-hover:bg-white/5 group-hover:opacity-100 sm:-inset-x-6"></div>
+            <div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-zinc-800 ring-1 ring-white/10 shadow-md">
+              <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6 stroke-teal-400" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h1.5C5.496 19.5 6 18.996 6 18.375m-3.75.125V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-1.5A1.125 1.125 0 0118 18.375M20.625 4.5H3.375m17.25 0c.621 0 1.125.504 1.125 1.125M20.625 4.5h-1.5C18.504 4.5 18 5.004 18 5.625m3.75-.125V5.625m0 0v1.5c0 .621-.504 1.125-1.125 1.125M3.375 4.5c-.621 0-1.125.504-1.125 1.125M3.375 4.5h1.5C5.496 4.5 6 5.004 6 5.625m-3.75.125V5.625m0 0v1.5c0 .621.504 1.125 1.125 1.125m0 0h1.5m-1.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m1.5-3.75C6.504 8.25 7.5 7.5 7.5 7.5h9c0 0 .996.75 1.875 1.5m-10.875 0v3.375c0 .621.504 1.125 1.125 1.125H15m-10.875-3.375h10.875m0 0v3.375c0 .621-.504 1.125-1.125 1.125H6.75"/>
+              </svg>
+            </div>
+            <h3 class="relative z-10 mt-6 text-base font-semibold text-zinc-100">Netflix Clone</h3>
+            <p class="relative z-10 mt-2 text-sm text-zinc-400">
+              Réplica da interface da Netflix com filmes organizados por gênero via API do TMDB. Construído com Next.js, React, TypeScript e Tailwind CSS, implantável no Vercel.
+            </p>
+            <p class="relative z-10 mt-6 flex items-center text-sm font-medium text-zinc-500 transition group-hover:text-teal-400">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5 flex-none fill-zinc-500 transition group-hover:fill-teal-400"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.475 2 2 6.588 2 12.253c0 4.537 2.862 8.369 6.838 9.727.5.09.687-.218.687-.487 0-.243-.013-1.05-.013-1.91C7 20.059 6.35 18.957 6.15 18.38c-.113-.295-.6-1.205-1.025-1.448-.35-.192-.85-.667-.013-.68.788-.012 1.35.744 1.538 1.051.9 1.551 2.338 1.116 2.912.846.088-.666.35-1.115.638-1.371-2.225-.256-4.55-1.14-4.55-5.062 0-1.115.387-2.038 1.025-2.756-.1-.256-.45-1.307.1-2.717 0 0 .837-.269 2.75 1.051.8-.23 1.65-.346 2.5-.346.85 0 1.7.115 2.5.346 1.912-1.333 2.75-1.05 2.75-1.05.55 1.409.2 2.46.1 2.716.637.718 1.025 1.628 1.025 2.756 0 3.934-2.337 4.806-4.562 5.062.362.32.675.936.675 1.897 0 1.371-.013 2.473-.013 2.82 0 .268.188.589.688.486a10.039 10.039 0 0 0 4.932-3.74A10.447 10.447 0 0 0 22 12.253C22 6.588 17.525 2 12 2Z"/></svg>
+              <span class="ml-2">yanmathzz/netflix_clone</span>
+            </p>
+          </li>
+
+          <!-- Amazon Scraper API -->
+          <li class="group relative flex flex-col items-start">
+            <a href="https://github.com/yanmathzz/Amazon_Scraper_API" target="_blank" rel="noopener noreferrer"
+               class="absolute inset-0 z-20 rounded-2xl cursor-pointer" aria-label="Amazon Scraper API — ver no GitHub"></a>
+            <div class="absolute -inset-y-4 -inset-x-4 z-0 rounded-2xl opacity-0 ring-1 ring-white/10 transition group-hover:bg-white/5 group-hover:opacity-100 sm:-inset-x-6"></div>
+            <div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-zinc-800 ring-1 ring-white/10 shadow-md">
+              <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6 stroke-teal-400" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z"/>
+              </svg>
+            </div>
+            <h3 class="relative z-10 mt-6 text-base font-semibold text-zinc-100">Amazon Scraper API</h3>
+            <p class="relative z-10 mt-2 text-sm text-zinc-400">
+              API serverless que extrai os produtos mais vendidos da Amazon via Puppeteer e armazena os dados no DynamoDB. Deploy automatizado na AWS Lambda com Serverless Framework.
+            </p>
+            <p class="relative z-10 mt-6 flex items-center text-sm font-medium text-zinc-500 transition group-hover:text-teal-400">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5 flex-none fill-zinc-500 transition group-hover:fill-teal-400"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.475 2 2 6.588 2 12.253c0 4.537 2.862 8.369 6.838 9.727.5.09.687-.218.687-.487 0-.243-.013-1.05-.013-1.91C7 20.059 6.35 18.957 6.15 18.38c-.113-.295-.6-1.205-1.025-1.448-.35-.192-.85-.667-.013-.68.788-.012 1.35.744 1.538 1.051.9 1.551 2.338 1.116 2.912.846.088-.666.35-1.115.638-1.371-2.225-.256-4.55-1.14-4.55-5.062 0-1.115.387-2.038 1.025-2.756-.1-.256-.45-1.307.1-2.717 0 0 .837-.269 2.75 1.051.8-.23 1.65-.346 2.5-.346.85 0 1.7.115 2.5.346 1.912-1.333 2.75-1.05 2.75-1.05.55 1.409.2 2.46.1 2.716.637.718 1.025 1.628 1.025 2.756 0 3.934-2.337 4.806-4.562 5.062.362.32.675.936.675 1.897 0 1.371-.013 2.473-.013 2.82 0 .268.188.589.688.486a10.039 10.039 0 0 0 4.932-3.74A10.447 10.447 0 0 0 22 12.253C22 6.588 17.525 2 12 2Z"/></svg>
+              <span class="ml-2">yanmathzz/Amazon_Scraper_API</span>
+            </p>
+          </li>
+
+          <!-- EletricDex -->
+          <li class="group relative flex flex-col items-start">
+            <a href="https://github.com/yanmathzz/EletricDex" target="_blank" rel="noopener noreferrer"
+               class="absolute inset-0 z-20 rounded-2xl cursor-pointer" aria-label="EletricDex — ver no GitHub"></a>
+            <div class="absolute -inset-y-4 -inset-x-4 z-0 rounded-2xl opacity-0 ring-1 ring-white/10 transition group-hover:bg-white/5 group-hover:opacity-100 sm:-inset-x-6"></div>
+            <div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-zinc-800 ring-1 ring-white/10 shadow-md">
+              <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6 stroke-teal-400" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
+              </svg>
+            </div>
+            <h3 class="relative z-10 mt-6 text-base font-semibold text-zinc-100">EletricDex</h3>
+            <p class="relative z-10 mt-2 text-sm text-zinc-400">
+              CLI interativa em Node.js que busca o tipo de qualquer Pokémon via web scraping com Puppeteer. Projeto de estudo em automação de browser e linha de comando.
+            </p>
+            <p class="relative z-10 mt-6 flex items-center text-sm font-medium text-zinc-500 transition group-hover:text-teal-400">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5 flex-none fill-zinc-500 transition group-hover:fill-teal-400"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.475 2 2 6.588 2 12.253c0 4.537 2.862 8.369 6.838 9.727.5.09.687-.218.687-.487 0-.243-.013-1.05-.013-1.91C7 20.059 6.35 18.957 6.15 18.38c-.113-.295-.6-1.205-1.025-1.448-.35-.192-.85-.667-.013-.68.788-.012 1.35.744 1.538 1.051.9 1.551 2.338 1.116 2.912.846.088-.666.35-1.115.638-1.371-2.225-.256-4.55-1.14-4.55-5.062 0-1.115.387-2.038 1.025-2.756-.1-.256-.45-1.307.1-2.717 0 0 .837-.269 2.75 1.051.8-.23 1.65-.346 2.5-.346.85 0 1.7.115 2.5.346 1.912-1.333 2.75-1.05 2.75-1.05.55 1.409.2 2.46.1 2.716.637.718 1.025 1.628 1.025 2.756 0 3.934-2.337 4.806-4.562 5.062.362.32.675.936.675 1.897 0 1.371-.013 2.473-.013 2.82 0 .268.188.589.688.486a10.039 10.039 0 0 0 4.932-3.74A10.447 10.447 0 0 0 22 12.253C22 6.588 17.525 2 12 2Z"/></svg>
+              <span class="ml-2">yanmathzz/EletricDex</span>
+            </p>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ FOOTER ════ -->
+<footer class="relative z-10 border-t border-white/10 pb-16 pt-10">
+  <div class="sm:px-8">
+    <div class="mx-auto max-w-7xl lg:px-8">
+      <div class="relative px-4 sm:px-8 lg:px-12">
+        <div class="mx-auto max-w-2xl lg:max-w-5xl">
+          <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-400">
+              <a href="./about.html"    class="transition hover:text-teal-400">About</a>
+              <a href="./articles.html" class="transition hover:text-teal-400">Articles</a>
+              <a href="./projects.html" class="transition hover:text-teal-400">Projects</a>
+              <a href="./uses.html"     class="transition hover:text-teal-400">Uses</a>
+              <a href="./hire.html"     class="transition hover:text-teal-400">Hire</a>
+            </div>
+            <p class="text-sm text-zinc-600">© 2025 Yan Matheus. Todos os direitos reservados.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ════ GALAXY ANIMATION ════ -->
+<script>
+(function () {
+  'use strict';
+  var canvas = document.getElementById('galaxy');
+  var ctx = canvas.getContext('2d');
+  var W, H, stars, meteors, nextMeteor, tick;
+
+  /* ── helpers ── */
+  function rand(min, max) { return min + Math.random() * (max - min); }
+
+  /* ── resize ── */
+  function resize() {
+    W = canvas.width  = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+
+  /* ── stars ── */
+  function buildStars() {
+    stars = [];
+    var count = Math.floor((W * H) / 6000); // density relative to screen
+    count = Math.max(120, Math.min(count, 280));
+    for (var i = 0; i < count; i++) {
+      stars.push({
+        x:     rand(0, W),
+        y:     rand(0, H),
+        r:     rand(0.15, 1.4),
+        base:  rand(0.08, 0.75),
+        phase: rand(0, Math.PI * 2),
+        spd:   rand(0.004, 0.018)
+      });
+    }
+  }
+
+  /* ── meteors ── */
+  function newMeteor() {
+    var angle = rand(Math.PI / 6, Math.PI / 3.5); // diagonal down-right
+    var speed = rand(8, 17);
+    return {
+      x:    rand(-W * 0.1, W * 0.85),
+      y:    rand(-H * 0.05, H * 0.55),
+      vx:   Math.cos(angle) * speed,
+      vy:   Math.sin(angle) * speed,
+      tail: rand(70, 160),
+      life: 0,
+      max:  Math.floor(rand(40, 75))
+    };
+  }
+
+  /* ── init ── */
+  function init() {
+    resize();
+    buildStars();
+    meteors    = [];
+    tick       = 0;
+    nextMeteor = Date.now() + rand(1200, 3000);
+  }
+
+  /* ── draw loop ── */
+  function frame() {
+    tick++;
+
+    /* Background */
+    ctx.fillStyle = '#080a0f';
+    ctx.fillRect(0, 0, W, H);
+
+    /* Stars — subtle twinkle */
+    for (var i = 0; i < stars.length; i++) {
+      var s  = stars[i];
+      var op = s.base * (0.5 + 0.5 * Math.sin(tick * s.spd + s.phase));
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, 6.2832);
+      ctx.fillStyle = 'rgba(255,255,255,' + op.toFixed(3) + ')';
+      ctx.fill();
+    }
+
+    /* Spawn meteors */
+    var now = Date.now();
+    if (now >= nextMeteor && meteors.length < 2) {
+      meteors.push(newMeteor());
+      nextMeteor = now + rand(3000, 7000);
+    }
+
+    /* Draw & update meteors */
+    for (var j = meteors.length - 1; j >= 0; j--) {
+      var m   = meteors[j];
+      m.x    += m.vx;
+      m.y    += m.vy;
+      m.life++;
+
+      /* Fade in/out envelope */
+      var p   = m.life / m.max;
+      var env = p < 0.2 ? p / 0.2 : (p < 0.7 ? 1 : (1 - p) / 0.3);
+      env     = Math.max(0, Math.min(1, env));
+
+      var mag = Math.hypot(m.vx, m.vy);
+      var tx  = m.x - (m.vx / mag) * m.tail;
+      var ty  = m.y - (m.vy / mag) * m.tail;
+
+      /* Tail gradient */
+      var grad = ctx.createLinearGradient(tx, ty, m.x, m.y);
+      grad.addColorStop(0,   'rgba(255,255,255,0)');
+      grad.addColorStop(0.5, 'rgba(180,220,255,' + (env * 0.3).toFixed(3) + ')');
+      grad.addColorStop(1,   'rgba(255,255,255,' + env.toFixed(3) + ')');
+
+      ctx.beginPath();
+      ctx.moveTo(tx, ty);
+      ctx.lineTo(m.x, m.y);
+      ctx.strokeStyle = grad;
+      ctx.lineWidth   = 1.4;
+      ctx.stroke();
+
+      /* Head glow */
+      var glow = ctx.createRadialGradient(m.x, m.y, 0, m.x, m.y, 4.5);
+      glow.addColorStop(0, 'rgba(255,255,255,' + env.toFixed(3) + ')');
+      glow.addColorStop(1, 'rgba(255,255,255,0)');
+      ctx.beginPath();
+      ctx.arc(m.x, m.y, 4.5, 0, 6.2832);
+      ctx.fillStyle = glow;
+      ctx.fill();
+
+      if (m.life >= m.max) meteors.splice(j, 1);
+    }
+
+    requestAnimationFrame(frame);
+  }
+
+  init();
+  frame();
+  window.addEventListener('resize', function () { resize(); buildStars(); });
+})();
+</script>
+
+</body>
+</html>

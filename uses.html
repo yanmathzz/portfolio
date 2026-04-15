@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Software e ferramentas que Yan Matheus usa no dia a dia." />
+  <title>Uses — Yan Matheus</title>
+  <script>(function(){var s=localStorage.getItem('isDarkMode'),mq=window.matchMedia('(prefers-color-scheme:dark)'),d=s!==null?s==='true':mq.matches;document.documentElement.classList.toggle('dark',d)})()</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={darkMode:'class'}</script>
+  <link rel="stylesheet" href="./design.css">
+  <script src="./anim.js"></script>
+  <style>
+    body{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif}
+    .bg-dot-white{background-image:radial-gradient(rgba(255,255,255,0.4) 1px,transparent 1px);background-size:24px 24px}
+    .bg-dot-black{background-image:radial-gradient(rgba(0,0,0,0.12) 1px,transparent 1px);background-size:24px 24px}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:0ms!important;animation:none!important}}
+  </style>
+</head>
+<body class="bg-white dark:bg-[#080808] antialiased">
+
+
+<!-- NAV -->
+<!-- NAV -->
+  <header class="fixed top-0 inset-x-0 z-50 pointer-events-none">
+    <div class="pt-6 sm:px-8">
+      <div class="mx-auto max-w-7xl lg:px-8">
+        <div class="relative px-4 sm:px-8 lg:px-12">
+          <div class="mx-auto max-w-2xl lg:max-w-5xl">
+            <div class="flex items-center justify-between gap-4">
+              <a href="./index.html" class="pointer-events-auto">
+                <div class="h-10 w-10 rounded-full ring-2 ring-zinc-900/5 dark:ring-white/10 shadow-md bg-zinc-100 dark:bg-zinc-800 overflow-hidden flex items-center justify-center">
+                  <img src="./images/perfil.jpg" alt="Yan Matheus" class="site-avatar-image h-full w-full object-cover"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+                  <span style="display:none" class="text-xs font-bold text-zinc-600 dark:text-zinc-300 w-full h-full items-center justify-center">YM</span>
+                </div>
+              </a>
+              <nav class="pointer-events-auto">
+                <ul class="flex items-center rounded-full bg-white/90 px-1.5 sm:px-3 text-xs sm:text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur-md dark:bg-zinc-900/90 dark:text-zinc-200 dark:ring-white/10">
+                  <li><a href="./about.html" class="relative block px-2.5 py-2 sm:px-3 transition hover:text-teal-500 dark:hover:text-teal-400">About</a></li>
+                  <li><a href="./articles.html" class="relative block px-2.5 py-2 sm:px-3 transition hover:text-teal-500 dark:hover:text-teal-400 hidden sm:block">Articles</a></li>
+                  <li><a href="./projects.html" class="relative block px-2.5 py-2 sm:px-3 transition hover:text-teal-500 dark:hover:text-teal-400">Projects</a></li>
+                  <li><a href="./uses.html" class="relative block px-2.5 py-2 sm:px-3 text-teal-500 dark:text-teal-400">Uses</a></li>
+                  <li><a href="./hire.html" class="relative block px-2.5 py-2 sm:px-3 transition hover:text-teal-500 dark:hover:text-teal-400">Hire</a></li>
+                </ul>
+              </nav>
+              <button id="theme-toggle" class="pointer-events-auto flex h-9 w-9 items-center justify-center rounded-full bg-white/90 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur-md dark:bg-zinc-900/90 dark:ring-white/10 transition-colors" aria-label="Alternar tema">
+                <svg class="hidden dark:block h-5 w-5 stroke-zinc-500" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                <svg class="block dark:hidden h-5 w-5 stroke-zinc-500" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<div class="w-full dark:bg-[#080808] bg-white min-h-screen relative">
+  <div class="absolute inset-0 dark:bg-[#080808] bg-white dark:bg-dot-white bg-dot-black pointer-events-none"></div>
+  <div class="relative z-10">
+
+  <!-- CONTENT -->
+  <div class="sm:px-8 pt-32 sm:pt-40">
+    <div class="mx-auto max-w-7xl lg:px-8">
+      <div class="relative px-4 sm:px-8 lg:px-12">
+        <div class="mx-auto max-w-2xl lg:max-w-5xl">
+
+          <header class="max-w-2xl">
+            <h1 class="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+              Software que uso, ferramentas que amo, e outras coisas que recomendo.
+            </h1>
+            <p class="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+              Aqui está tudo que uso no dia a dia — sistemas, linguagens, ferramentas de
+              produtividade e infraestrutura. Atualizo esta lista com o que realmente uso.
+            </p>
+          </header>
+
+          <div class="mt-16 sm:mt-20 space-y-20">
+
+            <!-- Sistemas Operacionais -->
+            <section>
+              <h2 class="uses-heading">
+                Sistemas Operacionais
+              </h2>
+              <ul class="space-y-4">
+                <li class="glass group relative flex gap-6 rounded-xl border border-zinc-100 dark:border-zinc-700/40 p-4 transition">
+                  <div class="flex-none">
+                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow ring-1 ring-zinc-900/5 dark:ring-zinc-700/50">
+                      <span class="text-xs font-bold text-zinc-500 dark:text-zinc-400">WIN</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Windows Server &amp; Windows 11</h3>
+                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Principal SO para administração de servidores corporativos, gestão de Active Directory, políticas de grupo e Microsoft Intune para gerenciamento de endpoints.</p>
+                  </div>
+                </li>
+                <li class="glass group relative flex gap-6 rounded-xl border border-zinc-100 dark:border-zinc-700/40 p-4 transition">
+                  <div class="flex-none">
+                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow ring-1 ring-zinc-900/5 dark:ring-zinc-700/50">
+                      <span class="text-xs font-bold text-zinc-500 dark:text-zinc-400">LNX</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Linux (Ubuntu / CentOS)</h3>
+                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Administração de servidores Linux em produção — configuração de serviços, monitoramento, segurança e automação via Shell/Bash.</p>
+                  </div>
+                </li>
+                <li class="glass group relative flex gap-6 rounded-xl border border-zinc-100 dark:border-zinc-700/40 p-4 transition">
+                  <div class="flex-none">
+                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow ring-1 ring-zinc-900/5 dark:ring-zinc-700/50">
+                      <span class="text-xs font-bold text-zinc-500 dark:text-zinc-400">MAC</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">macOS</h3>
+                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Suporte e manutenção de dispositivos macOS em ambientes corporativos. Familiaridade com terminal Unix e ferramentas de desenvolvimento.</p>
+                  </div>
+                </li>
+              </ul>
+            </section>
+
+            <!-- Linguagens & Desenvolvimento -->
+            <section>
+              <h2 class="uses-heading">
+                Linguagens &amp; Desenvolvimento
+              </h2>
+              <ul class="space-y-4">
+                <li class="glass flex gap-6 rounded-xl border border-zinc-100 dark:border-zinc-700/40 p-4 transition">
+                  <div class="flex-none">
+                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow ring-1 ring-zinc-900/5 dark:ring-zinc-700/50">
+                      <span class="text-xs font-bold text-teal-600 dark:text-teal-400">PY</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Python</h3>
+                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Linguagem principal para automações, RPAs, scripts de infra, integração de APIs e ferramentas internas. Uso intenso de bibliotecas como requests, pandas e subprocess.</p>
+                  </div>
+                </li>
+                <li class="glass flex gap-6 rounded-xl border border-zinc-100 dark:border-zinc-700/40 p-4 transition">
+                  <div class="flex-none">
+                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow ring-1 ring-zinc-900/5 dark:ring-zinc-700/50">
+                      <span class="text-xs font-bold text-teal-600 dark:text-teal-400">TS</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">TypeScript / JavaScript</h3>
+                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Desenvolvimento web full stack, APIs REST com Node.js e aplicações frontend modernas. Tipagem forte para projetos maiores.</p>
+                  </div>
+                </li>
+                <li class="glass flex gap-6 rounded-xl border border-zinc-100 dark:border-zinc-700/40 p-4 transition">
+                  <div class="flex-none">
+                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow ring-1 ring-zinc-900/5 dark:ring-zinc-700/50">
+                      <span class="text-xs font-bold text-zinc-500 dark:text-zinc-400">AU</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">AutoIt</h3>
+                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Automação de interface gráfica no Windows para tarefas que exigem interação com aplicações legadas sem API. Ideal para RPAs corporativos.</p>
+                  </div>
+                </li>
+                <li class="glass flex gap-6 rounded-xl border border-zinc-100 dark:border-zinc-700/40 p-4 transition">
+                  <div class="flex-none">
+                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow ring-1 ring-zinc-900/5 dark:ring-zinc-700/50">
+                      <span class="text-xs font-bold text-zinc-500 dark:text-zinc-400">SH</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Shell / Bash / PowerShell</h3>
+                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Scripts de administração de sistemas, automação de tarefas repetitivas, backup e deploy em ambientes Linux e Windows Server.</p>
+                  </div>
+                </li>
+              </ul>
+            </section>
+
+            <!-- Infraestrutura & Redes -->
+            <section>
+              <h2 class="uses-heading">
+                Infraestrutura &amp; Redes
+              </h2>
+              <ul class="space-y-4">
+                <li class="glass flex gap-6 rounded-xl border border-zinc-100 dark:border-zinc-700/40 p-4 transition">
+                  <div class="flex-none">
+                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow ring-1 ring-zinc-900/5 dark:ring-zinc-700/50">
+                      <span class="text-xs font-bold text-zinc-500 dark:text-zinc-400">NET</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">TCP/IP, DHCP, DNS</h3>
+                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Configuração e manutenção de serviços de rede fundamentais em ambientes corporativos. Troubleshooting de conectividade e diagnóstico de falhas.</p>
+                  </div>
+                </li>
+                <li class="glass flex gap-6 rounded-xl border border-zinc-100 dark:border-zinc-700/40 p-4 transition">
+                  <div class="flex-none">
+                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow ring-1 ring-zinc-900/5 dark:ring-zinc-700/50">
+                      <span class="text-xs font-bold text-zinc-500 dark:text-zinc-400">VM</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Virtualização</h3>
+                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Criação e gestão de máquinas virtuais para testes, desenvolvimento e ambientes de produção isolados.</p>
+                  </div>
+                </li>
+              </ul>
+            </section>
+
+            <!-- Ferramentas & Produtividade -->
+            <section>
+              <h2 class="uses-heading">
+                Ferramentas &amp; Produtividade
+              </h2>
+              <ul class="space-y-4">
+                <li class="glass flex gap-6 rounded-xl border border-zinc-100 dark:border-zinc-700/40 p-4 transition">
+                  <div class="flex-none">
+                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow ring-1 ring-zinc-900/5 dark:ring-zinc-700/50">
+                      <span class="text-xs font-bold text-teal-600 dark:text-teal-400">VS</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Visual Studio Code</h3>
+                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Editor principal para todo desenvolvimento. Extensions: Python, Pylance, ESLint, Prettier, GitLens e Remote SSH para edição em servidores.</p>
+                  </div>
+                </li>
+                <li class="glass flex gap-6 rounded-xl border border-zinc-100 dark:border-zinc-700/40 p-4 transition">
+                  <div class="flex-none">
+                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow ring-1 ring-zinc-900/5 dark:ring-zinc-700/50">
+                      <span class="text-xs font-bold text-zinc-500 dark:text-zinc-400">GIT</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Git / GitHub</h3>
+                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Controle de versão para todos os projetos. GitHub para repositórios públicos e colaboração. Uso de branches e pull requests mesmo em projetos solo.</p>
+                  </div>
+                </li>
+                <li class="glass flex gap-6 rounded-xl border border-zinc-100 dark:border-zinc-700/40 p-4 transition">
+                  <div class="flex-none">
+                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow ring-1 ring-zinc-900/5 dark:ring-zinc-700/50">
+                      <span class="text-xs font-bold text-zinc-500 dark:text-zinc-400">M365</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Microsoft 365 / Intune</h3>
+                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Administração de licenças, políticas de segurança, gerenciamento de dispositivos via Intune e automação via Microsoft Graph API.</p>
+                  </div>
+                </li>
+                <li class="glass flex gap-6 rounded-xl border border-zinc-100 dark:border-zinc-700/40 p-4 transition">
+                  <div class="flex-none">
+                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow ring-1 ring-zinc-900/5 dark:ring-zinc-700/50">
+                      <span class="text-xs font-bold text-zinc-500 dark:text-zinc-400">GLPI</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">GLPI</h3>
+                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Sistema de gestão de chamados e inventário de TI. Integração via API com scripts Python para automação de relatórios e atualização de ativos.</p>
+                  </div>
+                </li>
+              </ul>
+            </section>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="mt-32">
+    <div class="sm:px-8">
+      <div class="mx-auto max-w-7xl lg:px-8">
+        <div class="border-t border-zinc-100 dark:border-zinc-700/40 pb-16 pt-10">
+          <div class="relative px-4 sm:px-8 lg:px-12">
+            <div class="mx-auto max-w-2xl lg:max-w-5xl">
+              <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+                <div class="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800 dark:text-zinc-200">
+                  <a href="./about.html" class="transition hover:text-teal-500 dark:hover:text-teal-400">About</a>
+                  <a href="./articles.html" class="transition hover:text-teal-500 dark:hover:text-teal-400">Articles</a>
+                  <a href="./projects.html" class="transition hover:text-teal-500 dark:hover:text-teal-400">Projects</a>
+                  <a href="./uses.html" class="transition hover:text-teal-500 dark:hover:text-teal-400">Uses</a>
+                  <a href="./hire.html" class="transition hover:text-teal-500 dark:hover:text-teal-400">Hire</a>
+                </div>
+                <p class="text-sm text-zinc-400 dark:text-zinc-500">© 2025 Yan Matheus. Todos os direitos reservados.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  </div>
+</div>
+
+<script>
+  document.getElementById('theme-toggle').addEventListener('click',function(){
+    var dark=document.documentElement.classList.toggle('dark')
+    localStorage.setItem('isDarkMode',String(dark))
+  })
+</script>
+</body>
+</html>

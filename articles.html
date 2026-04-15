@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR" class="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Artigos de Yan Matheus sobre software, infraestrutura e automação." />
+  <title>Articles â€” Yan Matheus</title>
+  <script>(function(){var s=localStorage.getItem('isDarkMode'),mq=window.matchMedia('(prefers-color-scheme:dark)'),d=s!==null?s==='true':mq.matches;document.documentElement.classList.toggle('dark',d)})()</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={darkMode:'class'}</script>
+  <link rel="stylesheet" href="./design.css">
+  <script src="./anim.js"></script>
+  <style>
+    body{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif}
+    .bg-dot-white{background-image:radial-gradient(rgba(255,255,255,0.4) 1px,transparent 1px);background-size:24px 24px}
+    .bg-dot-black{background-image:radial-gradient(rgba(0,0,0,0.12) 1px,transparent 1px);background-size:24px 24px}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:0ms!important;animation:none!important}}
+  </style>
+</head>
+<body class="bg-white dark:bg-[#080808] antialiased">
+
+
+<!-- NAV -->
+<!-- NAV -->
+  <header class="fixed top-0 inset-x-0 z-50 pointer-events-none">
+    <div class="pt-6 sm:px-8">
+      <div class="mx-auto max-w-7xl lg:px-8">
+        <div class="relative px-4 sm:px-8 lg:px-12">
+          <div class="mx-auto max-w-2xl lg:max-w-5xl">
+            <div class="flex items-center justify-between gap-4">
+              <a href="./index.html" class="pointer-events-auto">
+                <div class="h-10 w-10 rounded-full ring-2 ring-zinc-900/5 dark:ring-white/10 shadow-md bg-zinc-100 dark:bg-zinc-800 overflow-hidden flex items-center justify-center">
+                  <img src="./images/perfil.jpg" alt="Yan Matheus" class="site-avatar-image h-full w-full object-cover"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+                  <span style="display:none" class="text-xs font-bold text-zinc-600 dark:text-zinc-300 w-full h-full items-center justify-center">YM</span>
+                </div>
+              </a>
+              <nav class="pointer-events-auto">
+                <ul class="flex items-center rounded-full bg-white/90 px-1.5 sm:px-3 text-xs sm:text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur-md dark:bg-zinc-900/90 dark:text-zinc-200 dark:ring-white/10">
+                  <li><a href="./about.html" class="relative block px-2.5 py-2 sm:px-3 transition hover:text-teal-500 dark:hover:text-teal-400">About</a></li>
+                  <li><a href="./articles.html" class="relative block px-2.5 py-2 sm:px-3 text-teal-500 dark:text-teal-400">Articles</a></li>
+                  <li><a href="./projects.html" class="relative block px-2.5 py-2 sm:px-3 transition hover:text-teal-500 dark:hover:text-teal-400">Projects</a></li>
+                  <li><a href="./uses.html" class="relative block px-2.5 py-2 sm:px-3 transition hover:text-teal-500 dark:hover:text-teal-400 hidden sm:block">Uses</a></li>
+                  <li><a href="./hire.html" class="relative block px-2.5 py-2 sm:px-3 transition hover:text-teal-500 dark:hover:text-teal-400">Hire</a></li>
+                </ul>
+              </nav>
+              <button id="theme-toggle" class="pointer-events-auto flex h-9 w-9 items-center justify-center rounded-full bg-white/90 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur-md dark:bg-zinc-900/90 dark:ring-white/10 transition-colors" aria-label="Alternar tema">
+                <svg class="hidden dark:block h-5 w-5 stroke-zinc-500" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                <svg class="block dark:hidden h-5 w-5 stroke-zinc-500" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<div class="w-full dark:bg-[#080808] bg-white min-h-screen relative">
+  <div class="absolute inset-0 dark:bg-[#080808] bg-white dark:bg-dot-white bg-dot-black pointer-events-none"></div>
+  <div class="relative z-10">
+
+  <!-- CONTENT -->
+  <div class="sm:px-8 pt-32 sm:pt-40">
+    <div class="mx-auto max-w-7xl lg:px-8">
+      <div class="relative px-4 sm:px-8 lg:px-12">
+        <div class="mx-auto max-w-2xl lg:max-w-5xl">
+
+          <header class="max-w-2xl">
+            <h1 class="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+              Escrevendo sobre software, infraestrutura e automação.
+            </h1>
+            <p class="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+              Meus pensamentos organizados sobre tecnologia, administração de sistemas, boas práticas
+              de desenvolvimento e lições aprendidas ao longo da carreira. Em formato longo, porque
+              algumas ideias merecem mais espaço do que um tweet.
+            </p>
+            <!-- article count badge -->
+            <div class="mt-5 flex items-center gap-3">
+              <span class="mono text-xs text-zinc-400 dark:text-zinc-500 bg-zinc-100 dark:bg-white/5 border border-zinc-200 dark:border-white/10 px-2.5 py-1 rounded-full">4 artigos</span>
+            </div>
+          </header>
+
+          <!-- Lista de artigos -->
+          <div class="mt-16 sm:mt-20">
+            <div class="article-rail md:pl-8">
+              <div class="flex max-w-3xl flex-col space-y-16">
+
+                <article id="python-autoit" class="article-row scroll-mt-32 md:grid md:grid-cols-4 md:items-baseline">
+                  <div class="md:col-span-3 group relative flex flex-col items-start">
+                    <div class="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/30 sm:-inset-x-6 sm:rounded-2xl"></div>
+                    <h2 class="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+                      <a href="#python-autoit">
+                        <span class="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
+                        <span class="relative z-10">Como automatizei processos repetitivos com Python e AutoIt</span>
+                      </a>
+                    </h2>
+                    <time datetime="2026-01-10" class="relative z-10 order-first mb-4 inline-flex items-center rounded-full border border-zinc-200 bg-zinc-100 px-3 py-1 mono text-xs text-zinc-500 dark:border-white/10 dark:bg-white/5 dark:text-zinc-400">
+                      10 de janeiro de 2026
+                    </time>
+                    <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">Explorando como construí RPAs que eliminaram horas de trabalho manual — da captura de tela à integração com GLPI e Microsoft 365. Aprendi que automatizar bem exige mais entendimento do processo do que do código.</p>
+                    <a href="#python-autoit-leitura" class="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500 hover:text-teal-600 dark:hover:text-teal-400">
+                      Abrir leitura
+                      <svg viewBox="0 0 16 16" fill="none" class="ml-1 h-4 w-4 stroke-current"><path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                  </div>
+                  <time datetime="2026-01-10" class="hidden">10 jan 2026</time>
+                </article>
+
+                <article id="linux-corporativo" class="article-row scroll-mt-32 md:grid md:grid-cols-4 md:items-baseline">
+                  <div class="md:col-span-3 group relative flex flex-col items-start">
+                    <div class="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
+                    <h2 class="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+                      <a href="#linux-corporativo">
+                        <span class="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
+                        <span class="relative z-10">Administrando servidores Linux em ambiente corporativo</span>
+                      </a>
+                    </h2>
+                    <time datetime="2025-11-22" class="relative z-10 order-first mb-4 inline-flex items-center rounded-full border border-zinc-200 bg-zinc-100 px-3 py-1 mono text-xs text-zinc-500 dark:border-white/10 dark:bg-white/5 dark:text-zinc-400">
+                      22 de novembro de 2025
+                    </time>
+                    <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">Lições práticas de gerenciar servidores Linux em produção — segurança, monitoramento e boas práticas aprendidas da maneira difícil. O que ninguém te conta antes de você colocar um servidor em produção.</p>
+                    <a href="#linux-corporativo-leitura" class="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500 hover:text-teal-600 dark:hover:text-teal-400">
+                      Abrir leitura
+                      <svg viewBox="0 0 16 16" fill="none" class="ml-1 h-4 w-4 stroke-current"><path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                  </div>
+                  <time datetime="2025-11-22" class="hidden">22 nov 2025</time>
+                </article>
+
+                <article id="glpi-m365" class="article-row scroll-mt-32 md:grid md:grid-cols-4 md:items-baseline">
+                  <div class="md:col-span-3 group relative flex flex-col items-start">
+                    <div class="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
+                    <h2 class="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+                      <a href="#glpi-m365">
+                        <span class="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
+                        <span class="relative z-10">Integração de Service Desk: GLPI + Microsoft 365</span>
+                      </a>
+                    </h2>
+                    <time datetime="2025-10-05" class="relative z-10 order-first mb-4 inline-flex items-center rounded-full border border-zinc-200 bg-zinc-100 px-3 py-1 mono text-xs text-zinc-500 dark:border-white/10 dark:bg-white/5 dark:text-zinc-400">
+                      5 de outubro de 2025
+                    </time>
+                    <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">Como conectei o sistema de tickets GLPI com Microsoft 365 para automatizar fluxos de atendimento e gerar relatórios automáticos por e-mail. Uma integração que economizou horas de trabalho por semana.</p>
+                    <a href="#glpi-m365-leitura" class="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500 hover:text-teal-600 dark:hover:text-teal-400">
+                      Abrir leitura
+                      <svg viewBox="0 0 16 16" fill="none" class="ml-1 h-4 w-4 stroke-current"><path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                  </div>
+                  <time datetime="2025-10-05" class="hidden">5 out 2025</time>
+                </article>
+
+                <article id="dhcp-dns" class="article-row scroll-mt-32 md:grid md:grid-cols-4 md:items-baseline">
+                  <div class="md:col-span-3 group relative flex flex-col items-start">
+                    <div class="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
+                    <h2 class="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+                      <a href="#dhcp-dns">
+                        <span class="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
+                        <span class="relative z-10">DHCP e DNS: guia prático para redes corporativas</span>
+                      </a>
+                    </h2>
+                    <time datetime="2025-08-18" class="relative z-10 order-first mb-4 inline-flex items-center rounded-full border border-zinc-200 bg-zinc-100 px-3 py-1 mono text-xs text-zinc-500 dark:border-white/10 dark:bg-white/5 dark:text-zinc-400">
+                      18 de agosto de 2025
+                    </time>
+                    <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">Um guia direto ao ponto sobre configuração e troubleshooting de DHCP e DNS em ambientes Windows Server, baseado em experiências reais de suporte. Inclui os erros mais comuns e como resolvê-los.</p>
+                    <a href="#dhcp-dns-leitura" class="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500 hover:text-teal-600 dark:hover:text-teal-400">
+                      Abrir leitura
+                      <svg viewBox="0 0 16 16" fill="none" class="ml-1 h-4 w-4 stroke-current"><path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                  </div>
+                  <time datetime="2025-08-18" class="hidden">18 ago 2025</time>
+                </article>
+
+          <section class="mt-20 border-t border-zinc-100 pt-16 dark:border-zinc-700/40">
+            <div class="max-w-3xl space-y-12">
+              <article id="python-autoit-leitura" class="scroll-mt-32 rounded-2xl border border-zinc-100 p-8 glass dark:border-zinc-700/40">
+                <div class="flex flex-wrap items-center gap-3">
+                  <span class="mono text-xs text-zinc-400 dark:text-zinc-500 bg-zinc-100 dark:bg-white/5 border border-zinc-200 dark:border-white/10 px-2.5 py-1 rounded-full">Python + AutoIt</span>
+                  <time datetime="2026-01-10" class="mono text-xs text-zinc-400 dark:text-zinc-500">10 jan 2026</time>
+                </div>
+                <h2 class="mt-4 text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">Como automatizei processos repetitivos com Python e AutoIt</h2>
+                <div class="mt-5 space-y-5 text-sm leading-7 text-zinc-600 dark:text-zinc-400">
+                  <p>Comecei mapeando cada etapa manual antes de escrever uma linha de código. Isso evitou automatizar exceções, reduziu retrabalho e deixou claro quais partes precisavam de Python para regra de negócio e quais dependiam do AutoIt para interagir com sistemas legados sem API.</p>
+                  <p>O ganho real veio quando parei de pensar em script isolado e passei a tratar o fluxo como produto interno: logs, validações, checkpoints e reexecução segura. Quando um robô falha silenciosamente, ele cria mais trabalho do que remove.</p>
+                  <p>No fim, a automação funcionou porque respeitou o processo da equipe. O código foi importante, mas o diferencial foi transformar uma rotina frágil em algo previsível, auditável e simples de operar.</p>
+                </div>
+              </article>
+
+              <article id="linux-corporativo-leitura" class="scroll-mt-32 rounded-2xl border border-zinc-100 p-8 glass dark:border-zinc-700/40">
+                <div class="flex flex-wrap items-center gap-3">
+                  <span class="mono text-xs text-zinc-400 dark:text-zinc-500 bg-zinc-100 dark:bg-white/5 border border-zinc-200 dark:border-white/10 px-2.5 py-1 rounded-full">Linux</span>
+                  <time datetime="2025-11-22" class="mono text-xs text-zinc-400 dark:text-zinc-500">22 nov 2025</time>
+                </div>
+                <h2 class="mt-4 text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">Administrando servidores Linux em ambiente corporativo</h2>
+                <div class="mt-5 space-y-5 text-sm leading-7 text-zinc-600 dark:text-zinc-400">
+                  <p>Servidor em produção raramente falha por um único motivo. Normalmente o problema nasce da combinação entre permissão mal ajustada, observabilidade fraca e uma mudança pequena que passou sem validação. Foi isso que me fez adotar checklist simples para deploy, backup e rollback.</p>
+                  <p>Também aprendi que padronização vale mais do que heroísmo. Nome consistente de serviços, logs centralizados e monitoramento básico economizam muito mais tempo do que tentar resolver tudo no improviso quando a pressão aparece.</p>
+                  <p>Em ambiente corporativo, estabilidade comunica maturidade. Um servidor bem cuidado não chama atenção, e isso costuma ser o melhor sinal de que a infraestrutura está fazendo o trabalho dela.</p>
+                </div>
+              </article>
+
+              <article id="glpi-m365-leitura" class="scroll-mt-32 rounded-2xl border border-zinc-100 p-8 glass dark:border-zinc-700/40">
+                <div class="flex flex-wrap items-center gap-3">
+                  <span class="mono text-xs text-zinc-400 dark:text-zinc-500 bg-zinc-100 dark:bg-white/5 border border-zinc-200 dark:border-white/10 px-2.5 py-1 rounded-full">GLPI + Microsoft 365</span>
+                  <time datetime="2025-10-05" class="mono text-xs text-zinc-400 dark:text-zinc-500">5 out 2025</time>
+                </div>
+                <h2 class="mt-4 text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">Integração de Service Desk: GLPI + Microsoft 365</h2>
+                <div class="mt-5 space-y-5 text-sm leading-7 text-zinc-600 dark:text-zinc-400">
+                  <p>Integração de service desk não é apenas conectar duas ferramentas. O desafio real foi manter o contexto do atendimento, reduzir duplicidade e garantir que o fluxo automático não escondesse informação importante para a equipe.</p>
+                  <p>Centralizei disparos e respostas em pontos claros do processo: abertura, atualização e fechamento. Isso ajudou a equipe a confiar no fluxo e criou uma trilha mais limpa para acompanhamento, relatórios e auditoria.</p>
+                  <p>Quando integração funciona bem, ela deixa de parecer integração. O usuário percebe menos fricção, o time perde menos tempo com tarefa operacional e o service desk fica mais próximo do que deveria ser: resolução rápida e organizada.</p>
+                </div>
+              </article>
+
+              <article id="dhcp-dns-leitura" class="scroll-mt-32 rounded-2xl border border-zinc-100 p-8 glass dark:border-zinc-700/40">
+                <div class="flex flex-wrap items-center gap-3">
+                  <span class="mono text-xs text-zinc-400 dark:text-zinc-500 bg-zinc-100 dark:bg-white/5 border border-zinc-200 dark:border-white/10 px-2.5 py-1 rounded-full">Redes</span>
+                  <time datetime="2025-08-18" class="mono text-xs text-zinc-400 dark:text-zinc-500">18 ago 2025</time>
+                </div>
+                <h2 class="mt-4 text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">DHCP e DNS: guia prático para redes corporativas</h2>
+                <div class="mt-5 space-y-5 text-sm leading-7 text-zinc-600 dark:text-zinc-400">
+                  <p>Boa parte dos chamados de rede parece complexa até você testar o básico com disciplina. Escopo de DHCP, reserva indevida, TTL mal compreendido e zona desatualizada continuam sendo fontes clássicas de falha em ambientes Windows Server.</p>
+                  <p>O que mais ajuda no troubleshooting é seguir uma ordem fixa: confirmar IP recebido, gateway, resolução local, resolução externa e somente depois avançar para hipóteses maiores. Isso reduz tempo de diagnóstico e evita mexer em configuração desnecessariamente.</p>
+                  <p>Redes corporativas ficam muito mais saudáveis quando documentação acompanha a operação. Uma boa tabela de escopos, zonas e exceções costuma valer mais do que memória de equipe.</p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="mt-32">
+    <div class="sm:px-8">
+      <div class="mx-auto max-w-7xl lg:px-8">
+        <div class="border-t border-zinc-100 dark:border-zinc-700/40 pb-16 pt-10">
+          <div class="relative px-4 sm:px-8 lg:px-12">
+            <div class="mx-auto max-w-2xl lg:max-w-5xl">
+              <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+                <div class="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800 dark:text-zinc-200">
+                  <a href="./about.html" class="transition hover:text-teal-500 dark:hover:text-teal-400">About</a>
+                  <a href="./articles.html" class="transition hover:text-teal-500 dark:hover:text-teal-400">Articles</a>
+                  <a href="./projects.html" class="transition hover:text-teal-500 dark:hover:text-teal-400">Projects</a>
+                  <a href="./uses.html" class="transition hover:text-teal-500 dark:hover:text-teal-400">Uses</a>
+                  <a href="./hire.html" class="transition hover:text-teal-500 dark:hover:text-teal-400">Hire</a>
+                </div>
+                <p class="text-sm text-zinc-400 dark:text-zinc-500">© 2025 Yan Matheus. Todos os direitos reservados.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  </div>
+</div>
+
+<script>
+  document.getElementById('theme-toggle').addEventListener('click',function(){
+    var dark=document.documentElement.classList.toggle('dark')
+    localStorage.setItem('isDarkMode',String(dark))
+  })
+</script>
+</body>
+</html>

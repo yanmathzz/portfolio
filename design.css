@@ -1,0 +1,339 @@
+/* ── Google Fonts ─────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ── Base ─────────────────────────────────────────────────────────────────── */
+body {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+.mono, .font-mono {
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+}
+
+/* ── Dark background premium ──────────────────────────────────────────────── */
+.dark body,
+.dark .bg-\[\\#111111\],
+.dark .dark\:bg-\[\\#111111\] {
+  background-color: #080808 !important;
+}
+
+/* ── Dot grid ─────────────────────────────────────────────────────────────── */
+.bg-dot-white {
+  background-image:
+    radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1px),
+    radial-gradient(circle at top left, rgba(45,212,191,0.08), transparent 42%);
+  background-size: 32px 32px, 100% 100%;
+}
+.bg-dot-black {
+  background-image:
+    radial-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+    radial-gradient(circle at top left, rgba(20,184,166,0.12), transparent 38%),
+    radial-gradient(circle at bottom right, rgba(14,116,144,0.10), transparent 32%);
+  background-size: 32px 32px, 100% 100%, 100% 100%;
+  animation: bgFloat 18s ease-in-out infinite alternate;
+}
+
+/* ── Glass card ───────────────────────────────────────────────────────────── */
+.glass {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.dark .glass {
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-color: rgba(255,255,255,0.07) !important;
+}
+.dark .glass:hover {
+  border-color: rgba(20,184,166,0.3) !important;
+  box-shadow: 0 0 32px rgba(20,184,166,0.06);
+}
+.glass:hover {
+  border-color: rgba(20,184,166,0.3) !important;
+}
+
+/* ── Availability badge ───────────────────────────────────────────────────── */
+.avail-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: .01em;
+  padding: 5px 12px;
+  border-radius: 100px;
+  border: 1px solid rgba(20,184,166,0.3);
+  color: rgb(15,118,110);
+  background: rgba(20,184,166,0.08);
+}
+.dark .avail-badge {
+  border-color: rgba(20,184,166,0.25);
+  color: rgb(94,234,212);
+  background: rgba(20,184,166,0.07);
+}
+.avail-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: #4ade80;
+  box-shadow: 0 0 8px rgba(74,222,128,0.8);
+  animation: avDot 2s ease infinite;
+}
+@keyframes avDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.55; transform: scale(0.8); }
+}
+
+/* ── Tech stack tags ──────────────────────────────────────────────────────── */
+.tech-tag {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  border-width: 1px;
+  border-style: solid;
+  transition: all .2s ease;
+  cursor: default;
+}
+.tech-tag:hover {
+  transform: translateY(-1px);
+}
+
+/* ── Hero gradient glow ───────────────────────────────────────────────────── */
+.hero-glow {
+  position: relative;
+}
+.dark .hero-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(ellipse 90% 50% at 20% -5%, rgba(20,184,166,0.12), transparent 60%);
+}
+
+/* ── Section rule — headings with teal fade line ──────────────────────────── */
+.section-rule {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgb(24,24,27);
+}
+.dark .section-rule {
+  color: rgb(244,244,245);
+}
+.section-rule::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(20,184,166,0.24), rgba(20,184,166,0.08), transparent);
+}
+
+/* ── Timeline (about page) ────────────────────────────────────────────────── */
+.tl-wrap {
+  position: relative;
+  padding-left: 32px;
+}
+.tl-wrap::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 20px;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, rgba(20,184,166,0.5) 0%, transparent 100%);
+}
+.tl-dot {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid rgb(20,184,166);
+  background: #ffffff;
+  z-index: 1;
+}
+.dark .tl-dot {
+  background: #080808;
+}
+
+/* ── Article hover accent ─────────────────────────────────────────────────── */
+.article-row {
+  position: relative;
+}
+.dark .article-row::before {
+  content: "";
+  position: absolute;
+  left: -25px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(45,212,191,0.45), rgba(45,212,191,0.12), transparent);
+  opacity: 0.35;
+  transition: opacity .25s, transform .25s;
+  border-radius: 1px;
+}
+.dark .article-row:hover::before {
+  opacity: 0.85;
+  transform: scaleY(1.02);
+}
+
+.photo-strip {
+  align-items: center;
+}
+
+.photo-strip > div:nth-child(2n) {
+  margin-top: 18px;
+}
+
+.site-avatar-image {
+  object-position: center 20%;
+  transform: scale(1.08);
+}
+
+.article-rail {
+  position: relative;
+}
+
+.article-rail::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: linear-gradient(to bottom, rgba(45,212,191,0.22), rgba(45,212,191,0.06), transparent);
+}
+
+@keyframes bgFloat {
+  from {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  to {
+    background-position: 0 0, -18px 14px, 22px -16px;
+  }
+}
+
+/* ── Hire page response badge ─────────────────────────────────────────────── */
+.response-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+.dark .response-badge {
+  border: 1px solid rgba(74,222,128,0.2);
+  color: rgb(74,222,128);
+  background: rgba(74,222,128,0.06);
+}
+.response-badge {
+  border: 1px solid rgba(22,163,74,0.25);
+  color: rgb(22,163,74);
+  background: rgba(22,163,74,0.07);
+}
+
+/* ── Uses section heading ─────────────────────────────────────────────────── */
+.uses-heading {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgb(20,184,166);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.uses-heading::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(20,184,166,0.2);
+}
+
+/* ── Tooltip ──────────────────────────────────────────────────────────────── */
+.tooltip {
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+}
+.group:hover .tooltip {
+  opacity: 1;
+}
+
+/* ── Animation ────────────────────────────────────────────────────────────── */
+body {
+  opacity: 0;
+  transition: opacity .38s ease;
+}
+body.ym-ready {
+  opacity: 1;
+}
+.fade-up {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+.fade-up.in {
+  opacity: 1;
+  transform: none;
+}
+.ym-w {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(14px);
+  animation: ymW .55s cubic-bezier(.22,1,.36,1) forwards;
+}
+@keyframes ymW {
+  to { opacity: 1; transform: none; }
+}
+.ym-nav-active {
+  color: rgb(20 184 166) !important;
+}
+.dark .ym-nav-active {
+  color: rgb(45 212 191) !important;
+}
+#ym-glow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  will-change: background;
+  transition: background .08s linear;
+}
+.ym-tilt {
+  transition: transform .22s ease, box-shadow .22s ease;
+  will-change: transform;
+}
+.ym-nav-shadow {
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,.12)) !important;
+}
+
+/* ── Prefers reduced motion ───────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  body, body.ym-ready {
+    opacity: 1 !important;
+    transition: none !important;
+  }
+  .fade-up {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .ym-w {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+  #ym-glow {
+    display: none !important;
+  }
+  .avail-dot {
+    animation: none !important;
+  }
+}
