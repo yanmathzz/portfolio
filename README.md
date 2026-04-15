@@ -1,16 +1,47 @@
 # Yan Matheus — Portfólio
 
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-0f766e?style=flat-square)
+![Stack](https://img.shields.io/badge/stack-HTML%20%7C%20CSS%20%7C%20JavaScript-18181b?style=flat-square)
+![Tipo](https://img.shields.io/badge/projeto-portf%C3%B3lio%20pessoal-27272a?style=flat-square)
+
 Portfólio pessoal desenvolvido para apresentar minha atuação em engenharia de computação, infraestrutura de TI, automação de processos e desenvolvimento de software.
 
 ## Visão geral
 
-Este repositório reúne o código-fonte do meu site pessoal, construído como uma aplicação estática com foco em:
+Este repositório contém o código-fonte do meu site pessoal, criado como uma aplicação estática com foco em apresentação profissional, organização de projetos e posicionamento técnico.
 
-- apresentação profissional
-- projetos em destaque
-- artigos e anotações técnicas
-- stack e ferramentas do dia a dia
-- página de contato para oportunidades e parcerias
+O objetivo é concentrar, em um único lugar, minha experiência com:
+
+- infraestrutura corporativa
+- administração de servidores Windows e Linux
+- redes e serviços como DHCP e DNS
+- automação com Python e AutoIt
+- integrações e ferramentas internas
+- desenvolvimento de soluções voltadas para operação e produtividade
+
+## Destaques do projeto
+
+- interface limpa, responsiva e com identidade visual própria
+- páginas dedicadas para apresentação, projetos, artigos, ferramentas e contato
+- animações leves para enriquecer a navegação sem comprometer a leitura
+- estrutura simples de manter, por ser um projeto estático
+- organização pensada para evolução contínua do conteúdo
+
+## Seções do site
+
+- `index.html` — página inicial e apresentação geral
+- `about.html` — resumo profissional e trajetória
+- `articles.html` — artigos e textos técnicos
+- `projects.html` — projetos selecionados
+- `uses.html` — ferramentas, ambientes e softwares que utilizo
+- `hire.html` — página de contato para oportunidades e colaboração
+
+## Stack utilizada
+
+- HTML5
+- CSS3
+- JavaScript
+- Tailwind CSS via CDN
 
 ## Estrutura do projeto
 
@@ -27,22 +58,6 @@ portfolio/
 |-- uses.html
 |-- README.md
 ```
-
-## Seções do site
-
-- `index.html` — página inicial e apresentação geral
-- `about.html` — resumo profissional e trajetória
-- `articles.html` — artigos e textos técnicos
-- `projects.html` — projetos selecionados
-- `uses.html` — ferramentas, ambientes e softwares que utilizo
-- `hire.html` — página de contato para trabalho e colaboração
-
-## Stack utilizada
-
-- HTML5
-- CSS3
-- JavaScript
-- Tailwind CSS via CDN
 
 ## Como executar localmente
 
@@ -65,15 +80,11 @@ Depois, acesse:
 http://localhost:5500
 ```
 
-## Objetivo do projeto
+## Publicação
 
-Este portfólio foi criado para centralizar minha presença profissional na web e apresentar, de forma objetiva, meu trabalho com:
+Este projeto pode ser publicado facilmente com GitHub Pages ou qualquer serviço de hospedagem para sites estáticos.
 
-- infraestrutura corporativa
-- administração de servidores Windows e Linux
-- redes e serviços como DHCP e DNS
-- automação com Python e AutoIt
-- integrações e ferramentas internas
+Quando o link público estiver ativo, esta seção pode ser atualizada com a URL oficial do portfólio.
 
 ## Contato
 
