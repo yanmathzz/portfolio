@@ -1,73 +1,72 @@
-# Yan Matheus — Portfólio
+<div align="center">
+  <h1>Yan Matheus — Portfólio</h1>
+  <p>Portfólio pessoal voltado a infraestrutura, automação e desenvolvimento de software.</p>
 
-![Status](https://img.shields.io/badge/status-em%20desenvolvimento-0f766e?style=flat-square)
-![Stack](https://img.shields.io/badge/stack-HTML%20%7C%20CSS%20%7C%20JavaScript-18181b?style=flat-square)
-![Tipo](https://img.shields.io/badge/projeto-portf%C3%B3lio%20pessoal-27272a?style=flat-square)
+  <p>
+    <img src="https://img.shields.io/badge/HTML5-estrutura-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5">
+    <img src="https://img.shields.io/badge/CSS3-estiliza%C3%A7%C3%A3o-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3">
+    <img src="https://img.shields.io/badge/JavaScript-intera%C3%A7%C3%B5es-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript">
+    <img src="https://img.shields.io/badge/Tailwind-CDN-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS">
+  </p>
+</div>
 
-Portfólio pessoal desenvolvido para apresentar minha atuação em engenharia de computação, infraestrutura de TI, automação de processos e desenvolvimento de software.
+---
 
 ## Visão geral
 
-Este repositório contém o código-fonte do meu site pessoal, criado como uma aplicação estática com foco em apresentação profissional, organização de projetos e posicionamento técnico.
+Este repositório contém o código-fonte do meu site pessoal, desenvolvido como uma aplicação estática para apresentar minha atuação profissional em:
 
-O objetivo é concentrar, em um único lugar, minha experiência com:
+- engenharia de computação
+- infraestrutura de TI
+- automação de processos
+- desenvolvimento de software
+- projetos e artigos técnicos
 
-- infraestrutura corporativa
-- administração de servidores Windows e Linux
-- redes e serviços como DHCP e DNS
-- automação com Python e AutoIt
-- integrações e ferramentas internas
-- desenvolvimento de soluções voltadas para operação e produtividade
+O site foi pensado para funcionar como uma vitrine profissional direta, com navegação simples, identidade visual própria e organização clara do conteúdo.
 
-## Destaques do projeto
-
-- interface limpa, responsiva e com identidade visual própria
-- páginas dedicadas para apresentação, projetos, artigos, ferramentas e contato
-- animações leves para enriquecer a navegação sem comprometer a leitura
-- estrutura simples de manter, por ser um projeto estático
-- organização pensada para evolução contínua do conteúdo
+---
 
 ## Seções do site
 
-- `index.html` — página inicial e apresentação geral
-- `about.html` — resumo profissional e trajetória
+- `index.html` — apresentação principal e visão geral do perfil
+- `about.html` — trajetória, experiência e contexto profissional
 - `articles.html` — artigos e textos técnicos
 - `projects.html` — projetos selecionados
 - `uses.html` — ferramentas, ambientes e softwares que utilizo
 - `hire.html` — página de contato para oportunidades e colaboração
 
+---
+
+## Destaques
+
+- layout responsivo com foco em leitura e apresentação profissional
+- tema visual consistente entre as páginas
+- animações leves para complementar a experiência sem poluir a interface
+- estrutura simples de manter e expandir
+- organização voltada a portfólio técnico pessoal
+
+---
+
 ## Stack utilizada
 
-- HTML5
-- CSS3
-- JavaScript
-- Tailwind CSS via CDN
+| Tecnologia | Função |
+|---|---|
+| HTML5 | Estrutura das páginas |
+| CSS3 | Estilização e refinamento visual |
+| JavaScript | Interações, animações e tema |
+| Tailwind CSS | Utilitários visuais via CDN |
 
-## Estrutura do projeto
-
-```text
-portfolio/
-|-- images/
-|-- about.html
-|-- anim.js
-|-- articles.html
-|-- design.css
-|-- hire.html
-|-- index.html
-|-- projects.html
-|-- uses.html
-|-- README.md
-```
+---
 
 ## Como executar localmente
 
-Por ser um projeto estático, existem duas formas simples de visualizar o site localmente.
+Por ser um projeto estático, você pode visualizar o site de duas formas.
 
-### 1. Abrindo diretamente no navegador
+### Abrindo diretamente no navegador
 
 Basta abrir o arquivo `index.html`.
 
-### 2. Servindo localmente com Python
+### Servindo localmente
 
 ```powershell
 cd C:\Users\ymath\portfolio
@@ -80,17 +79,39 @@ Depois, acesse:
 http://localhost:5500
 ```
 
-## Publicação
+---
 
-Este projeto pode ser publicado facilmente com GitHub Pages ou qualquer serviço de hospedagem para sites estáticos.
+## Estrutura do projeto
 
-Quando o link público estiver ativo, esta seção pode ser atualizada com a URL oficial do portfólio.
+```text
+portfolio/
+├── images/
+├── about.html
+├── anim.js
+├── articles.html
+├── design.css
+├── hire.html
+├── index.html
+├── projects.html
+├── uses.html
+└── README.md
+```
+
+---
+
+## Objetivo do projeto
+
+Este portfólio foi criado para centralizar minha presença profissional na web e apresentar, de forma objetiva, minha experiência com ambientes corporativos, servidores Windows e Linux, redes, automação com Python e AutoIt, integrações e desenvolvimento de soluções internas.
+
+---
 
 ## Contato
 
 - E-mail: `ymatheus706@gmail.com`
 - LinkedIn: [Yan Matheus Pinheiro Cezario](https://www.linkedin.com/in/yan-matheus-361b6b235)
 - GitHub: [yanmathzz](https://github.com/yanmathzz)
+
+---
 
 ## Observações
 
