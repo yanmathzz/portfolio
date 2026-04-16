@@ -15,12 +15,13 @@
     .bg-dot-white{background-image:radial-gradient(rgba(255,255,255,0.4) 1px,transparent 1px);background-size:24px 24px}
     .bg-dot-black{background-image:radial-gradient(rgba(0,0,0,0.12) 1px,transparent 1px);background-size:24px 24px}
     .project-grid{display:grid;gap:1.5rem}
-    .project-card{position:relative;display:flex;flex-direction:column;gap:1.15rem;height:100%;border:1px solid rgba(228,228,231,.9);background:rgba(255,255,255,.72);backdrop-filter:blur(10px);border-radius:1.75rem;padding:1.5rem;transition:transform .24s ease,border-color .24s ease,background .24s ease,box-shadow .24s ease}
-    .project-card:hover{transform:translateY(-3px);border-color:rgba(15,118,110,.26);box-shadow:0 18px 50px rgba(15,118,110,.08)}
-    .project-card::after{content:"";position:absolute;inset:auto -2.5rem -3.5rem auto;width:9rem;height:9rem;border-radius:999px;background:radial-gradient(circle,rgba(15,118,110,.1),transparent 72%);pointer-events:none;opacity:0;transition:opacity .24s ease}
-    .project-card:hover::after{opacity:1}
+    .project-card{position:relative;display:flex;flex-direction:column;gap:1.15rem;height:100%;border:1px solid rgba(228,228,231,.9);background:linear-gradient(180deg,rgba(255,255,255,.78),rgba(248,250,252,.68));backdrop-filter:blur(10px);border-radius:1.75rem;padding:1.5rem;transition:transform .24s ease,border-color .24s ease,background .24s ease,box-shadow .24s ease}
+    .project-card:hover{transform:translateY(-2px);border-color:rgba(15,118,110,.18);box-shadow:0 14px 34px rgba(15,23,42,.08)}
     .project-card-link{position:absolute;inset:0;z-index:20;border-radius:1.75rem}
-    .project-icon{display:flex;align-items:center;justify-content:center;width:3rem;height:3rem;border-radius:999px;background:rgba(15,118,110,.08);border:1px solid rgba(15,118,110,.14);color:#0F766E}
+    .project-preview{position:relative;z-index:10;overflow:hidden;border-radius:1.15rem;border:1px solid rgba(228,228,231,.9);aspect-ratio:16/9;background:linear-gradient(180deg,rgba(244,244,245,.88),rgba(228,228,231,.78))}
+    .project-preview img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease,filter .35s ease}
+    .project-card:hover .project-preview img{transform:scale(1.02)}
+    .project-icon{display:flex;align-items:center;justify-content:center;width:3rem;height:3rem;border-radius:999px;background:rgba(15,118,110,.06);border:1px solid rgba(15,118,110,.12);color:#0F766E}
     .project-kicker{font:500 10px/1 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#71717a}
     .project-meta{display:flex;flex-wrap:wrap;gap:.5rem}
     .project-tag{display:inline-flex;align-items:center;padding:.35rem .65rem;border-radius:999px;border:1px solid rgba(228,228,231,.9);font:500 10px/1 'JetBrains Mono',monospace;letter-spacing:.05em;color:#52525b;background:rgba(255,255,255,.6)}
@@ -31,13 +32,14 @@
     .project-stats{display:grid;gap:1rem}
     .project-stat{border-left:1px solid rgba(15,118,110,.18);padding-left:1rem}
     .dark .project-card,.dark .project-highlight{border-color:rgba(63,63,70,.9)}
-    .dark .project-card{background:rgba(255,255,255,.03)}
+    .dark .project-card{background:linear-gradient(180deg,rgba(20,20,23,.92),rgba(12,12,14,.92))}
+    .dark .project-preview{border-color:rgba(63,63,70,.9);background:linear-gradient(180deg,rgba(24,24,27,.92),rgba(14,14,16,.92))}
     .dark .project-highlight{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.025))}
-    .dark .project-card:hover{box-shadow:0 18px 50px rgba(15,118,110,.12)}
+    .dark .project-card:hover{border-color:rgba(115,115,122,.9);box-shadow:0 16px 38px rgba(0,0,0,.28)}
     .dark .project-kicker,.dark .project-tag,.dark .project-repo{color:#a1a1aa}
     .dark .project-tag{background:rgba(255,255,255,.03);border-color:rgba(63,63,70,.9)}
     .dark .project-icon{background:rgba(73,163,155,.12);border-color:rgba(73,163,155,.18);color:#49A39B}
-    .dark .project-highlight::before,.dark .project-card::after{background:radial-gradient(circle,rgba(73,163,155,.16),transparent 72%)}
+    .dark .project-highlight::before{background:radial-gradient(circle,rgba(73,163,155,.16),transparent 72%)}
     @media (min-width: 768px){.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:0ms!important;animation:none!important}}
   </style>
@@ -145,6 +147,9 @@
               <div class="project-grid mt-10">
                 <article class="project-card fade-up">
                   <a href="https://github.com/yanmathzz/inkpad" target="_blank" rel="noopener noreferrer" class="project-card-link" aria-label="Abrir projeto Inkpad no GitHub"></a>
+                  <div class="project-preview">
+                    <img src="./images/576974218-38931ff6-108d-4ec1-a2bc-090d0a74412d.png" alt="Preview do projeto Inkpad" loading="lazy" />
+                  </div>
                   <div class="project-icon relative z-10">
                     <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5 stroke-current" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"/></svg>
                   </div>
@@ -187,6 +192,9 @@
 
                 <article class="project-card fade-up">
                   <a href="https://github.com/yanmathzz/tep-token-vista" target="_blank" rel="noopener noreferrer" class="project-card-link" aria-label="Abrir projeto TEP Token Vista no GitHub"></a>
+                  <div class="project-preview">
+                    <img src="./images/Captura de tela 2026-04-15 223124.png" alt="Preview do projeto TEP Token Vista" loading="lazy" />
+                  </div>
                   <div class="project-icon relative z-10">
                     <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5 stroke-current" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg>
                   </div>
@@ -208,6 +216,9 @@
 
                 <article class="project-card fade-up">
                   <a href="https://github.com/yanmathzz/netflix_clone" target="_blank" rel="noopener noreferrer" class="project-card-link" aria-label="Abrir projeto Netflix Clone no GitHub"></a>
+                  <div class="project-preview">
+                    <img src="./images/banner_netflix.png" alt="Preview do projeto Netflix Clone" loading="lazy" />
+                  </div>
                   <div class="project-icon relative z-10">
                     <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5 stroke-current" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h1.5C5.496 19.5 6 18.996 6 18.375m-3.75.125V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-1.5A1.125 1.125 0 0118 18.375M20.625 4.5H3.375m17.25 0c.621 0 1.125.504 1.125 1.125M20.625 4.5h-1.5C18.504 4.5 18 5.004 18 5.625m3.75-.125V5.625m0 0v1.5c0 .621-.504 1.125-1.125 1.125M3.375 4.5c-.621 0-1.125.504-1.125 1.125M3.375 4.5h1.5C5.496 4.5 6 5.004 6 5.625m-3.75.125V5.625m0 0v1.5c0 .621.504 1.125 1.125 1.125m0 0h1.5m-1.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m1.5-3.75C6.504 8.25 7.5 7.5 7.5 7.5h9c0 0 .996.75 1.875 1.5m-10.875 0v3.375c0 .621.504 1.125 1.125 1.125H15m-10.875-3.375h10.875m0 0v3.375c0 .621-.504 1.125-1.125 1.125H6.75"/></svg>
                   </div>

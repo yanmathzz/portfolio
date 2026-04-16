@@ -65,7 +65,7 @@
       <div class="relative px-4 sm:px-8 lg:px-12">
         <div class="mx-auto max-w-2xl lg:max-w-5xl">
 
-          <header class="max-w-3xl page-intro">
+          <header class="max-w-3xl page-intro fade-up">
             <div class="page-eyebrow mb-5">Uses</div>
             <h1 class="text-balance text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
               Ferramentas, sistemas e ambientes que fazem parte do meu dia a dia.
@@ -75,193 +75,84 @@
             </p>
           </header>
 
-          <div class="mt-16 sm:mt-20 space-y-20">
+          <div class="mt-16 sm:mt-20">
+            <div class="section-rule text-sm font-semibold">
+              <h2>Minha stack</h2>
+            </div>
+            <p class="mt-3 max-w-2xl text-sm leading-7 text-zinc-600 dark:text-zinc-400">
+              As tecnologias que eu mais uso para desenvolver, operar infraestrutura e automatizar processos no dia a dia.
+            </p>
 
-            <!-- Sistemas Operacionais -->
-            <section>
-              <h2 class="uses-heading">
-                Sistemas Operacionais
-              </h2>
-              <ul class="space-y-4">
-                <li class="glass group relative flex gap-6 rounded-xl border border-zinc-100 dark:border-zinc-700/40 p-4 transition">
-                  <div class="flex-none">
-                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow ring-1 ring-zinc-900/5 dark:ring-zinc-700/50">
-                      <span class="text-xs font-bold text-zinc-500 dark:text-zinc-400">WIN</span>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Windows Server &amp; Windows 11</h3>
-                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Principal SO para administração de servidores corporativos, gestão de Active Directory, políticas de grupo e Microsoft Intune para gerenciamento de endpoints.</p>
-                  </div>
-                </li>
-                <li class="glass group relative flex gap-6 rounded-xl border border-zinc-100 dark:border-zinc-700/40 p-4 transition">
-                  <div class="flex-none">
-                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow ring-1 ring-zinc-900/5 dark:ring-zinc-700/50">
-                      <span class="text-xs font-bold text-zinc-500 dark:text-zinc-400">LNX</span>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Linux (Ubuntu / CentOS)</h3>
-                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Administração de servidores Linux em produção — configuração de serviços, monitoramento, segurança e automação via Shell/Bash.</p>
-                  </div>
-                </li>
-                <li class="glass group relative flex gap-6 rounded-xl border border-zinc-100 dark:border-zinc-700/40 p-4 transition">
-                  <div class="flex-none">
-                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow ring-1 ring-zinc-900/5 dark:ring-zinc-700/50">
-                      <span class="text-xs font-bold text-zinc-500 dark:text-zinc-400">MAC</span>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">macOS</h3>
-                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Suporte e manutenção de dispositivos macOS em ambientes corporativos. Familiaridade com terminal Unix e ferramentas de desenvolvimento.</p>
-                  </div>
-                </li>
-              </ul>
-            </section>
+            <div class="mt-10 stack-showcase stack-full">
+              <article class="stack-card">
+                <span class="stack-watermark" aria-hidden="true">[]</span>
+                <div class="stack-head">
+                  <span class="stack-icon">OS</span>
+                  <h3 class="stack-title">Sistemas</h3>
+                </div>
+                <div class="stack-rule"></div>
+                <div class="stack-list">
+                  <div class="stack-item"><span class="stack-tech">WS</span><span>Windows Server</span></div>
+                  <div class="stack-item"><span class="stack-tech">W11</span><span>Windows 11</span></div>
+                  <div class="stack-item"><span class="stack-tech">LX</span><span>Linux</span></div>
+                  <div class="stack-item"><span class="stack-tech">UB</span><span>Ubuntu</span></div>
+                  <div class="stack-item"><span class="stack-tech">CT</span><span>CentOS</span></div>
+                  <div class="stack-item"><span class="stack-tech">MC</span><span>macOS</span></div>
+                </div>
+              </article>
 
-            <!-- Linguagens & Desenvolvimento -->
-            <section>
-              <h2 class="uses-heading">
-                Linguagens &amp; Desenvolvimento
-              </h2>
-              <ul class="space-y-4">
-                <li class="glass flex gap-6 rounded-xl border border-zinc-100 dark:border-zinc-700/40 p-4 transition">
-                  <div class="flex-none">
-                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow ring-1 ring-zinc-900/5 dark:ring-zinc-700/50">
-                      <span class="text-xs font-bold text-teal-600 dark:text-teal-400">PY</span>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Python</h3>
-                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Linguagem principal para automações, RPAs, scripts de infra, integração de APIs e ferramentas internas. Uso intenso de bibliotecas como requests, pandas e subprocess.</p>
-                  </div>
-                </li>
-                <li class="glass flex gap-6 rounded-xl border border-zinc-100 dark:border-zinc-700/40 p-4 transition">
-                  <div class="flex-none">
-                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow ring-1 ring-zinc-900/5 dark:ring-zinc-700/50">
-                      <span class="text-xs font-bold text-teal-600 dark:text-teal-400">TS</span>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">TypeScript / JavaScript</h3>
-                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Desenvolvimento web full stack, APIs REST com Node.js e aplicações frontend modernas. Tipagem forte para projetos maiores.</p>
-                  </div>
-                </li>
-                <li class="glass flex gap-6 rounded-xl border border-zinc-100 dark:border-zinc-700/40 p-4 transition">
-                  <div class="flex-none">
-                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow ring-1 ring-zinc-900/5 dark:ring-zinc-700/50">
-                      <span class="text-xs font-bold text-zinc-500 dark:text-zinc-400">AU</span>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">AutoIt</h3>
-                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Automação de interface gráfica no Windows para tarefas que exigem interação com aplicações legadas sem API. Ideal para RPAs corporativos.</p>
-                  </div>
-                </li>
-                <li class="glass flex gap-6 rounded-xl border border-zinc-100 dark:border-zinc-700/40 p-4 transition">
-                  <div class="flex-none">
-                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow ring-1 ring-zinc-900/5 dark:ring-zinc-700/50">
-                      <span class="text-xs font-bold text-zinc-500 dark:text-zinc-400">SH</span>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Shell / Bash / PowerShell</h3>
-                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Scripts de administração de sistemas, automação de tarefas repetitivas, backup e deploy em ambientes Linux e Windows Server.</p>
-                  </div>
-                </li>
-              </ul>
-            </section>
+              <article class="stack-card">
+                <span class="stack-watermark" aria-hidden="true">&lt;/&gt;</span>
+                <div class="stack-head">
+                  <span class="stack-icon">DEV</span>
+                  <h3 class="stack-title">Desenvolvimento</h3>
+                </div>
+                <div class="stack-rule"></div>
+                <div class="stack-list">
+                  <div class="stack-item"><span class="stack-tech">PY</span><span>Python</span></div>
+                  <div class="stack-item"><span class="stack-tech">TS</span><span>TypeScript</span></div>
+                  <div class="stack-item"><span class="stack-tech">JS</span><span>JavaScript</span></div>
+                  <div class="stack-item"><span class="stack-tech">AU</span><span>AutoIt</span></div>
+                  <div class="stack-item"><span class="stack-tech">SH</span><span>Shell</span></div>
+                  <div class="stack-item"><span class="stack-tech">PS</span><span>PowerShell</span></div>
+                </div>
+              </article>
 
-            <!-- Infraestrutura & Redes -->
-            <section>
-              <h2 class="uses-heading">
-                Infraestrutura &amp; Redes
-              </h2>
-              <ul class="space-y-4">
-                <li class="glass flex gap-6 rounded-xl border border-zinc-100 dark:border-zinc-700/40 p-4 transition">
-                  <div class="flex-none">
-                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow ring-1 ring-zinc-900/5 dark:ring-zinc-700/50">
-                      <span class="text-xs font-bold text-zinc-500 dark:text-zinc-400">NET</span>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">TCP/IP, DHCP, DNS</h3>
-                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Configuração e manutenção de serviços de rede fundamentais em ambientes corporativos. Troubleshooting de conectividade e diagnóstico de falhas.</p>
-                  </div>
-                </li>
-                <li class="glass flex gap-6 rounded-xl border border-zinc-100 dark:border-zinc-700/40 p-4 transition">
-                  <div class="flex-none">
-                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow ring-1 ring-zinc-900/5 dark:ring-zinc-700/50">
-                      <span class="text-xs font-bold text-zinc-500 dark:text-zinc-400">VM</span>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Virtualização</h3>
-                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Criação e gestão de máquinas virtuais para testes, desenvolvimento e ambientes de produção isolados.</p>
-                  </div>
-                </li>
-              </ul>
-            </section>
+              <article class="stack-card">
+                <span class="stack-watermark" aria-hidden="true">::</span>
+                <div class="stack-head">
+                  <span class="stack-icon">NET</span>
+                  <h3 class="stack-title">Infraestrutura</h3>
+                </div>
+                <div class="stack-rule"></div>
+                <div class="stack-list">
+                  <div class="stack-item"><span class="stack-tech">IP</span><span>TCP/IP</span></div>
+                  <div class="stack-item"><span class="stack-tech">DH</span><span>DHCP</span></div>
+                  <div class="stack-item"><span class="stack-tech">DNS</span><span>DNS</span></div>
+                  <div class="stack-item"><span class="stack-tech">VM</span><span>Virtualização</span></div>
+                  <div class="stack-item"><span class="stack-tech">TR</span><span>Troubleshooting</span></div>
+                  <div class="stack-item"><span class="stack-tech">OPS</span><span>Operação</span></div>
+                </div>
+              </article>
 
-            <!-- Ferramentas & Produtividade -->
-            <section>
-              <h2 class="uses-heading">
-                Ferramentas &amp; Produtividade
-              </h2>
-              <ul class="space-y-4">
-                <li class="glass flex gap-6 rounded-xl border border-zinc-100 dark:border-zinc-700/40 p-4 transition">
-                  <div class="flex-none">
-                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow ring-1 ring-zinc-900/5 dark:ring-zinc-700/50">
-                      <span class="text-xs font-bold text-teal-600 dark:text-teal-400">VS</span>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Visual Studio Code</h3>
-                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Editor principal para todo desenvolvimento. Extensions: Python, Pylance, ESLint, Prettier, GitLens e Remote SSH para edição em servidores.</p>
-                  </div>
-                </li>
-                <li class="glass flex gap-6 rounded-xl border border-zinc-100 dark:border-zinc-700/40 p-4 transition">
-                  <div class="flex-none">
-                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow ring-1 ring-zinc-900/5 dark:ring-zinc-700/50">
-                      <span class="text-xs font-bold text-zinc-500 dark:text-zinc-400">GIT</span>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Git / GitHub</h3>
-                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Controle de versão para todos os projetos. GitHub para repositórios públicos e colaboração. Uso de branches e pull requests mesmo em projetos solo.</p>
-                  </div>
-                </li>
-                <li class="glass flex gap-6 rounded-xl border border-zinc-100 dark:border-zinc-700/40 p-4 transition">
-                  <div class="flex-none">
-                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow ring-1 ring-zinc-900/5 dark:ring-zinc-700/50">
-                      <span class="text-xs font-bold text-zinc-500 dark:text-zinc-400">M365</span>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Microsoft 365 / Intune</h3>
-                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Administração de licenças, políticas de segurança, gerenciamento de dispositivos via Intune e automação via Microsoft Graph API.</p>
-                  </div>
-                </li>
-                <li class="glass flex gap-6 rounded-xl border border-zinc-100 dark:border-zinc-700/40 p-4 transition">
-                  <div class="flex-none">
-                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow ring-1 ring-zinc-900/5 dark:ring-zinc-700/50">
-                      <span class="text-xs font-bold text-zinc-500 dark:text-zinc-400">GLPI</span>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">GLPI</h3>
-                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Sistema de gestão de chamados e inventário de TI. Integração via API com scripts Python para automação de relatórios e atualização de ativos.</p>
-                  </div>
-                </li>
-              </ul>
-            </section>
-
+              <article class="stack-card">
+                <span class="stack-watermark" aria-hidden="true">++</span>
+                <div class="stack-head">
+                  <span class="stack-icon">OPS</span>
+                  <h3 class="stack-title">Ferramentas</h3>
+                </div>
+                <div class="stack-rule"></div>
+                <div class="stack-list">
+                  <div class="stack-item"><span class="stack-tech">VS</span><span>VS Code</span></div>
+                  <div class="stack-item"><span class="stack-tech">GT</span><span>Git</span></div>
+                  <div class="stack-item"><span class="stack-tech">GH</span><span>GitHub</span></div>
+                  <div class="stack-item"><span class="stack-tech">M3</span><span>Microsoft 365</span></div>
+                  <div class="stack-item"><span class="stack-tech">IN</span><span>Intune</span></div>
+                  <div class="stack-item"><span class="stack-tech">GP</span><span>GLPI</span></div>
+                </div>
+              </article>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- FOOTER -->
   <footer class="mt-32">
     <div class="sm:px-8">

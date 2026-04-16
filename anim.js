@@ -31,17 +31,6 @@
       }, { passive: true });
     }
 
-    /* Hero h1 word stagger */
-    var h1 = document.querySelector('section h1, main h1, .hero-glow h1');
-    if (h1 && !h1.dataset.ymDone && !prefersReducedMotion) {
-      h1.dataset.ymDone = '1';
-      h1.classList.remove('fade-up');
-      var raw = h1.textContent.replace(/\s+/g, ' ').trim();
-      h1.innerHTML = raw.split(' ').map(function (w, i) {
-        return '<span class="ym-w" style="animation-delay:' + (.08 + i * .055) + 's">' + w + '&nbsp;</span>';
-      }).join('');
-    }
-
     /* Auto fade-up */
     var AUTO = ['main section', 'article', '.rounded-2xl', 'ol > li', '.grid > *', '.space-y-10 > *', '.flex.flex-col.gap-16 > *'];
     AUTO.forEach(function (sel) {
