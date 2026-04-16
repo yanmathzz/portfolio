@@ -14,31 +14,37 @@
     body{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif}
     .bg-dot-white{background-image:radial-gradient(rgba(255,255,255,0.4) 1px,transparent 1px);background-size:24px 24px}
     .bg-dot-black{background-image:radial-gradient(rgba(0,0,0,0.12) 1px,transparent 1px);background-size:24px 24px}
-    .hire-kicker{display:inline-flex;align-items:center;gap:.6rem;font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#14b8a6}
-    .hire-kicker::before{content:"";width:34px;height:1px;background:linear-gradient(90deg,rgba(20,184,166,.6),rgba(20,184,166,.08))}
+    .hire-kicker{display:inline-flex;align-items:center;gap:.6rem;font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#0F766E}
+    .hire-kicker::before{content:"";width:34px;height:1px;background:linear-gradient(90deg,rgba(15,118,110,.6),rgba(15,118,110,.08))}
     .hire-shell{position:relative}
-    .hire-shell::before{content:"";position:absolute;inset:-4rem 0 auto auto;width:22rem;height:22rem;border-radius:999px;background:radial-gradient(circle,rgba(20,184,166,.12),transparent 65%);filter:blur(10px);pointer-events:none}
+    .hire-shell::before{content:"";position:absolute;inset:-4rem 0 auto auto;width:22rem;height:22rem;border-radius:999px;background:radial-gradient(circle,rgba(15,118,110,.14),transparent 65%);filter:blur(10px);pointer-events:none}
     .hire-lead{max-width:42rem}
     .hire-grid{display:grid;gap:1.25rem}
-    .hire-card{position:relative;border:1px solid rgba(228,228,231,.9);background:rgba(255,255,255,.72);backdrop-filter:blur(10px);border-radius:1.5rem;padding:1.35rem 1.4rem;transition:transform .22s ease,border-color .22s ease,background .22s ease}
-    .hire-card:hover{transform:translateY(-2px);border-color:rgba(20,184,166,.28)}
+    .hire-card{position:relative;min-height:14rem;border:1px solid rgba(228,228,231,.9);background:rgba(255,255,255,.72);backdrop-filter:blur(10px);border-radius:1.5rem;padding:1.35rem 1.4rem;transition:transform .22s ease,border-color .22s ease,background .22s ease}
+    .hire-card:hover{transform:translateY(-2px);border-color:rgba(15,118,110,.28)}
     .hire-card-label{font:500 10px/1 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#71717a}
-    .hire-card-link{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}
-    .hire-card-arrow{font:500 11px/1 'JetBrains Mono',monospace;color:#14b8a6;transition:transform .2s ease}
+    .hire-card-link{display:flex;flex-direction:column;gap:1rem;height:100%}
+    .hire-card-head{display:flex;flex-direction:column;align-items:flex-start;gap:.7rem;width:100%}
+    .hire-card-copy{display:grid;gap:.75rem}
+    .hire-card-copy p{margin:0}
+    .hire-card-body{margin-top:auto}
+    .hire-card-arrow{display:inline-flex;align-items:center;font:500 11px/1 'JetBrains Mono',monospace;color:#0F766E;transition:transform .2s ease}
     .hire-card:hover .hire-card-arrow{transform:translateX(2px)}
     .hire-service{display:grid;gap:.85rem;border:1px solid rgba(228,228,231,.9);background:rgba(255,255,255,.56);border-radius:1.75rem;padding:1.5rem 1.4rem;transition:border-color .22s ease,transform .22s ease}
-    .hire-service:hover{transform:translateY(-2px);border-color:rgba(20,184,166,.24)}
+    .hire-service:hover{transform:translateY(-2px);border-color:rgba(15,118,110,.24)}
     .hire-service-meta{font:500 10px/1 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#71717a}
     .hire-steps{display:grid;gap:1rem}
     .hire-step{display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:start}
-    .hire-step-index{width:1.9rem;height:1.9rem;border-radius:999px;border:1px solid rgba(20,184,166,.22);display:flex;align-items:center;justify-content:center;font:500 11px/1 'JetBrains Mono',monospace;color:#14b8a6;background:rgba(20,184,166,.06)}
+    .hire-step-index{width:1.9rem;height:1.9rem;border-radius:999px;border:1px solid rgba(15,118,110,.22);display:flex;align-items:center;justify-content:center;font:500 11px/1 'JetBrains Mono',monospace;color:#0F766E;background:rgba(15,118,110,.06)}
     .hire-cta{position:relative;overflow:hidden;border-radius:1.75rem;border:1px solid rgba(228,228,231,.9);background:linear-gradient(180deg,rgba(255,255,255,.88),rgba(244,244,245,.75));padding:2rem}
-    .hire-cta::after{content:"";position:absolute;right:-5rem;top:-5rem;width:14rem;height:14rem;border-radius:999px;background:radial-gradient(circle,rgba(20,184,166,.16),transparent 70%)}
-    .dark .hire-shell::before{background:radial-gradient(circle,rgba(20,184,166,.16),transparent 65%)}
+    .hire-cta::after{content:"";position:absolute;right:-5rem;top:-5rem;width:14rem;height:14rem;border-radius:999px;background:radial-gradient(circle,rgba(15,118,110,.16),transparent 70%)}
+    .dark .hire-shell::before{background:radial-gradient(circle,rgba(73,163,155,.18),transparent 65%)}
     .dark .hire-card,.dark .hire-service{border-color:rgba(63,63,70,.9);background:rgba(255,255,255,.03)}
     .dark .hire-card-label,.dark .hire-service-meta{color:#a1a1aa}
     .dark .hire-cta{border-color:rgba(63,63,70,.9);background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.025))}
-    @media (min-width: 768px){.hire-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    @media (min-width: 640px){.hire-card-head{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;column-gap:1rem;row-gap:.45rem}.hire-card-arrow{flex-shrink:0;justify-self:end;white-space:nowrap}}
+    @media (min-width: 768px){.hire-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (min-width: 1200px){.hire-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:0ms!important;animation:none!important}}
   </style>
 </head>
@@ -86,7 +92,7 @@
           <div class="relative px-4 sm:px-8 lg:px-12">
             <div class="mx-auto max-w-2xl lg:max-w-3xl">
 
-              <header class="hire-shell max-w-3xl">
+              <header class="hire-shell max-w-3xl page-intro">
                 <div class="hire-kicker mb-5">Hire me</div>
                 <div class="response-badge mb-6">
                   <svg viewBox="0 0 24 24" fill="none" class="w-3.5 h-3.5 stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
@@ -110,32 +116,38 @@
                 <div class="mt-8 hire-grid">
                   <a href="mailto:ymatheus706@gmail.com" class="hire-card group">
                     <div class="hire-card-link">
-                      <div>
-                        <p class="hire-card-label">E-mail</p>
-                        <p class="mt-3 text-sm font-semibold text-zinc-900 dark:text-zinc-100">ymatheus706@gmail.com</p>
-                        <p class="mt-2 text-sm leading-7 text-zinc-500 dark:text-zinc-400">Melhor para propostas detalhadas, escopo e contexto técnico.</p>
+                      <div class="hire-card-head">
+                        <div class="hire-card-copy">
+                          <p class="hire-card-label">E-mail</p>
+                          <p class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">ymatheus706@gmail.com</p>
+                        </div>
+                        <span class="hire-card-arrow">Escrever</span>
                       </div>
-                      <span class="hire-card-arrow">Escrever</span>
+                      <p class="hire-card-body text-sm leading-7 text-zinc-500 dark:text-zinc-400">Ideal para propostas detalhadas, escopo do projeto e contexto técnico.</p>
                     </div>
                   </a>
                   <a href="https://wa.me/5591988233868" target="_blank" rel="noopener noreferrer" class="hire-card group">
                     <div class="hire-card-link">
-                      <div>
-                        <p class="hire-card-label">WhatsApp</p>
-                        <p class="mt-3 text-sm font-semibold text-zinc-900 dark:text-zinc-100">(91) 98823-3868</p>
-                        <p class="mt-2 text-sm leading-7 text-zinc-500 dark:text-zinc-400">Canal rápido para alinhamento inicial e conversa objetiva.</p>
+                      <div class="hire-card-head">
+                        <div class="hire-card-copy">
+                          <p class="hire-card-label">WhatsApp</p>
+                          <p class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">(91) 98823-3868</p>
+                        </div>
+                        <span class="hire-card-arrow">Conversar</span>
                       </div>
-                      <span class="hire-card-arrow">Conversar</span>
+                      <p class="hire-card-body text-sm leading-7 text-zinc-500 dark:text-zinc-400">Melhor canal para alinhamento inicial, troca rápida e conversa objetiva.</p>
                     </div>
                   </a>
                   <a href="https://www.linkedin.com/in/yan-matheus-361b6b235" target="_blank" rel="noopener noreferrer" class="hire-card group">
                     <div class="hire-card-link">
-                      <div>
-                        <p class="hire-card-label">LinkedIn</p>
-                        <p class="mt-3 text-sm font-semibold text-zinc-900 dark:text-zinc-100">Yan Matheus Pinheiro Cezario</p>
-                        <p class="mt-2 text-sm leading-7 text-zinc-500 dark:text-zinc-400">Bom para networking, contexto profissional e histórico.</p>
+                      <div class="hire-card-head">
+                        <div class="hire-card-copy">
+                          <p class="hire-card-label">LinkedIn</p>
+                          <p class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Yan Matheus Pinheiro Cezario</p>
+                        </div>
+                        <span class="hire-card-arrow">Perfil</span>
                       </div>
-                      <span class="hire-card-arrow">Perfil</span>
+                      <p class="hire-card-body text-sm leading-7 text-zinc-500 dark:text-zinc-400">Bom para networking, histórico profissional e contexto de atuação.</p>
                     </div>
                   </a>
                 </div>

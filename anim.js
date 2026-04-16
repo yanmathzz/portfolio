@@ -21,7 +21,7 @@
       var mx = -9999, my = -9999, pending = false;
       function paintGlow() {
         var dark = document.documentElement.classList.contains('dark');
-        var c = dark ? 'rgba(20,184,166,.08)' : 'rgba(20,184,166,.09)';
+      var c = dark ? 'rgba(73,163,155,.10)' : 'rgba(15,118,110,.10)';
         glow.style.background = 'radial-gradient(700px circle at ' + mx + 'px ' + my + 'px,' + c + ',transparent 75%)';
         pending = false;
       }
