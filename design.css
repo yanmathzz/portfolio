@@ -7,11 +7,21 @@ body {
 }
 
 :root {
-  --accent-rgb: 15,118,110;
-  --accent-soft-rgb: 73,163,155;
-  --accent-color: #0F766E;
-  --accent-soft: #49A39B;
-  --accent-deep: #0B5A54;
+  /* Marca: azul-periwinkle, alinhado ao perfil do GitHub.
+     O tom "color" e usado no modo claro e o "soft" no escuro, porque cada
+     fundo exige uma luminosidade diferente para manter contraste AA. */
+  --accent-rgb: 68,81,214;         /* #4451D6 — 6,19:1 no branco */
+  --accent-soft-rgb: 141,162,251;  /* #8DA2FB — 7,87:1 no fundo escuro */
+  --accent-color: #4451D6;
+  --accent-soft: #8DA2FB;
+  --accent-deep: #303A93;
+  --accent-violet-rgb: 196,167,251;
+
+  /* Fundos do modo escuro: carvao levemente azulado em vez de preto puro.
+     Preto absoluto achata as sombras e faz as bordas sumirem. */
+  --surface-0: #0E1016;
+  --surface-1: #161922;
+  --surface-2: #1D2029;
 }
 .mono, .font-mono {
   font-family: "JetBrains Mono", "Fira Code", monospace;
@@ -20,24 +30,34 @@ body {
 /* ── Dark background premium ──────────────────────────────────────────────── */
 .dark body,
 .dark .bg-\[\\#111111\],
-.dark .dark\:bg-\[\\#111111\] {
-  background-color: #080808 !important;
+.dark .dark\:bg-\[\\#111111\],
+.dark .bg-\[\\#080808\],
+.dark .dark\:bg-\[\\#080808\] {
+  background-color: var(--surface-0) !important;
 }
 
-/* ── Dot grid ─────────────────────────────────────────────────────────────── */
+/* ── Fundo ambiente ───────────────────────────────────────────────────────────
+   Substitui a malha de pontinhos por halos de cor difusos. Os pontos marcavam
+   muito a epoca do layout e competiam com o texto; o degrade da profundidade
+   sem disputar atencao. As classes seguem com o mesmo nome para o markup das
+   12 paginas continuar valendo.                                              */
+.bg-dot-black,
 .bg-dot-white {
   background-image:
-    radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1px),
-    radial-gradient(circle at top left, rgba(var(--accent-soft-rgb),0.08), transparent 42%);
-  background-size: 32px 32px, 100% 100%;
+    radial-gradient(ellipse 70% 55% at 12% -8%, rgba(var(--accent-rgb),0.10), transparent 62%),
+    radial-gradient(ellipse 60% 50% at 92% 8%, rgba(var(--accent-violet-rgb),0.07), transparent 58%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%, 100% 100%;
 }
-.bg-dot-black {
+.dark .bg-dot-black,
+.bg-dot-white {
   background-image:
-    radial-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
-    radial-gradient(circle at top left, rgba(var(--accent-rgb),0.14), transparent 38%),
-    radial-gradient(circle at bottom right, rgba(var(--accent-soft-rgb),0.10), transparent 32%);
-  background-size: 32px 32px, 100% 100%, 100% 100%;
-  animation: bgFloat 18s ease-in-out infinite alternate;
+    radial-gradient(ellipse 72% 58% at 10% -10%, rgba(var(--accent-soft-rgb),0.13), transparent 60%),
+    radial-gradient(ellipse 62% 52% at 94% 6%, rgba(var(--accent-violet-rgb),0.09), transparent 56%);
+  animation: bgFloat 24s ease-in-out infinite alternate;
+}
+@media (prefers-reduced-motion: reduce) {
+  .bg-dot-black, .bg-dot-white { animation: none; }
 }
 
 /* ── Glass card ───────────────────────────────────────────────────────────── */
@@ -689,10 +709,10 @@ body.ym-ready {
   to { opacity: 1; transform: none; }
 }
 .ym-nav-active {
-  color: rgb(20 184 166) !important;
+  color: var(--accent-color) !important;
 }
 .dark .ym-nav-active {
-  color: rgb(45 212 191) !important;
+  color: var(--accent-soft) !important;
 }
 #ym-glow {
   position: fixed;

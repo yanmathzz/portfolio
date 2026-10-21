@@ -1,6 +1,6 @@
 <div align="center">
   <h1>Yan Matheus — Portfólio</h1>
-  <p>Portfólio pessoal voltado a infraestrutura, automação e desenvolvimento de software.</p>
+  <p>Portfólio pessoal de desenvolvedor full-stack (TypeScript/JavaScript) — web, desktop e mobile, da arquitetura ao deploy.</p>
 
   <p>
     <img src="https://img.shields.io/badge/HTML5-estrutura-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5">
@@ -16,10 +16,10 @@
 
 Este repositório contém o código-fonte do meu site pessoal, desenvolvido como uma aplicação estática para apresentar minha atuação profissional em:
 
-- engenharia de computação
-- infraestrutura de TI
-- automação de processos
-- desenvolvimento de software
+- desenvolvimento full-stack (TypeScript, React, Node.js, PostgreSQL, Docker, Electron)
+- aplicações web, desktop e mobile
+- integrações com APIs fiscais brasileiras (SEFAZ: NF-e, CT-e, MDF-e)
+- automação de processos (Python, RPA)
 - projetos e artigos técnicos
 
 O site foi pensado para funcionar como uma vitrine profissional direta, com navegação simples, identidade visual própria e organização clara do conteúdo.
@@ -85,23 +85,57 @@ http://localhost:5500
 
 ```text
 portfolio/
+├── en/                 # mesmas 6 páginas em inglês
 ├── images/
+├── scripts/            # geradores e transformações (ver abaixo)
 ├── about.html
 ├── anim.js
 ├── articles.html
-├── design.css
+├── design.css          # tokens de cor e componentes
+├── favicon.svg
 ├── hire.html
 ├── index.html
+├── og-image.png        # cartão de compartilhamento (1200×630)
 ├── projects.html
+├── robots.txt
+├── sitemap.xml
+├── theme.js            # paleta da marca (Tailwind)
 ├── uses.html
 └── README.md
 ```
+
+### Tema e cores
+
+A identidade visual mora em dois lugares, e só neles:
+
+- `theme.js` — remapeia as escalas de cor do Tailwind para a paleta da marca.
+  As páginas seguem usando classes como `text-teal-500`; o nome é apelido
+  histórico, a cor que sai é a da marca.
+- `design.css` — o bloco `:root` guarda os tokens (`--accent-color`,
+  `--accent-soft`, `--surface-0`…) usados pelos componentes próprios.
+
+Trocar a identidade do site é editar esses dois arquivos. Nenhuma cor deve ser
+escrita direto no HTML.
+
+### Scripts
+
+Rodar a partir da raiz do projeto:
+
+| Script | Para que serve |
+|---|---|
+| `scripts/build_en.py` | Recria o esqueleto das páginas em inglês quando a **estrutura** das PT muda |
+| `scripts/translate_en.py` | Aplica as traduções em `en/`; acusa erro se alguma frase não for encontrada |
+| `scripts/make_assets.py` | Gera favicon, imagem social, `robots.txt` e `sitemap.xml` |
+| `scripts/add_meta.py` | Injeta favicon e tags Open Graph nas 12 páginas |
+| `scripts/apply_theme.py` | Propaga o tema (usado na migração; idempotente) |
+| `scripts/sweep_colors.py` | Troca cores cravadas à mão pelos tokens |
+| `scripts/update_projects.py` | Mantém a galeria de projetos em paridade entre PT e EN |
 
 ---
 
 ## Objetivo do projeto
 
-Este portfólio foi criado para centralizar minha presença profissional na web e apresentar, de forma objetiva, minha experiência com ambientes corporativos, servidores Windows e Linux, redes, automação com Python e AutoIt, integrações e desenvolvimento de soluções internas.
+Este portfólio foi criado para centralizar minha presença profissional na web e apresentar, de forma objetiva, minha experiência como desenvolvedor full-stack: sistemas de gestão em produção, integrações fiscais com a SEFAZ (NF-e, CT-e, MDF-e), aplicações desktop com Electron, apps mobile com React Native/Expo e automação de processos com Python.
 
 ---
 

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://portfolio-yanmatheus.vercel.app/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://portfolio-yanmatheus.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-yanmatheus.vercel.app/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-yanmatheus.vercel.app/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://portfolio-yanmatheus.vercel.app/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://portfolio-yanmatheus.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-yanmatheus.vercel.app/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-yanmatheus.vercel.app/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://portfolio-yanmatheus.vercel.app/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://portfolio-yanmatheus.vercel.app/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-yanmatheus.vercel.app/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-yanmatheus.vercel.app/about.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://portfolio-yanmatheus.vercel.app/en/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://portfolio-yanmatheus.vercel.app/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-yanmatheus.vercel.app/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-yanmatheus.vercel.app/about.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://portfolio-yanmatheus.vercel.app/articles.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://portfolio-yanmatheus.vercel.app/articles.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-yanmatheus.vercel.app/en/articles.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-yanmatheus.vercel.app/articles.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://portfolio-yanmatheus.vercel.app/en/articles.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://portfolio-yanmatheus.vercel.app/articles.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-yanmatheus.vercel.app/en/articles.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-yanmatheus.vercel.app/articles.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://portfolio-yanmatheus.vercel.app/projects.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://portfolio-yanmatheus.vercel.app/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-yanmatheus.vercel.app/en/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-yanmatheus.vercel.app/projects.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://portfolio-yanmatheus.vercel.app/en/projects.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://portfolio-yanmatheus.vercel.app/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-yanmatheus.vercel.app/en/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-yanmatheus.vercel.app/projects.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://portfolio-yanmatheus.vercel.app/uses.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://portfolio-yanmatheus.vercel.app/uses.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-yanmatheus.vercel.app/en/uses.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-yanmatheus.vercel.app/uses.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://portfolio-yanmatheus.vercel.app/en/uses.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://portfolio-yanmatheus.vercel.app/uses.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-yanmatheus.vercel.app/en/uses.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-yanmatheus.vercel.app/uses.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://portfolio-yanmatheus.vercel.app/hire.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://portfolio-yanmatheus.vercel.app/hire.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-yanmatheus.vercel.app/en/hire.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-yanmatheus.vercel.app/hire.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://portfolio-yanmatheus.vercel.app/en/hire.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://portfolio-yanmatheus.vercel.app/hire.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-yanmatheus.vercel.app/en/hire.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://portfolio-yanmatheus.vercel.app/hire.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

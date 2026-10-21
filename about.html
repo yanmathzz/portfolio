@@ -3,21 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sobre Yan Matheus — Engenheiro de Computação &amp; Analista de Infraestrutura." />
+  <meta name="description" content="Sobre Yan Matheus — Desenvolvedor Full-Stack (TypeScript/JavaScript) e Engenheiro de Computação. Web, desktop e mobile, da arquitetura ao deploy." />
   <title>About — Yan Matheus</title>
   <script>(function(){var s=localStorage.getItem('isDarkMode'),mq=window.matchMedia('(prefers-color-scheme:dark)'),d=s!==null?s==='true':mq.matches;document.documentElement.classList.toggle('dark',d)})()</script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={darkMode:'class'}</script>
+  <script src="./theme.js"></script>
   <link rel="stylesheet" href="./design.css">
   <script src="./anim.js"></script>
   <style>
     body{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif}
-    .bg-dot-white{background-image:radial-gradient(rgba(255,255,255,0.4) 1px,transparent 1px);background-size:24px 24px}
-    .bg-dot-black{background-image:radial-gradient(rgba(0,0,0,0.12) 1px,transparent 1px);background-size:24px 24px}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:0ms!important;animation:none!important}}
   </style>
+  <link rel="alternate" hreflang="pt-BR" href="https://portfolio-yanmatheus.vercel.app/about.html" />
+  <link rel="alternate" hreflang="en" href="https://portfolio-yanmatheus.vercel.app/en/about.html" />
+  <link rel="alternate" hreflang="x-default" href="https://portfolio-yanmatheus.vercel.app/about.html" />
+  <link rel="canonical" href="https://portfolio-yanmatheus.vercel.app/about.html" />
+  <!-- cartao social -->
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <meta name="theme-color" content="#0E1016" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Yan Matheus" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:title" content="About — Yan Matheus" />
+  <meta property="og:description" content="Sobre Yan Matheus — Desenvolvedor Full-Stack (TypeScript/JavaScript) e Engenheiro de Computação. Web, desktop e mobile, da arquitetura ao deploy." />
+  <meta property="og:url" content="https://portfolio-yanmatheus.vercel.app/about.html" />
+  <meta property="og:image" content="https://portfolio-yanmatheus.vercel.app/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About — Yan Matheus" />
+  <meta name="twitter:description" content="Sobre Yan Matheus — Desenvolvedor Full-Stack (TypeScript/JavaScript) e Engenheiro de Computação. Web, desktop e mobile, da arquitetura ao deploy." />
+  <meta name="twitter:image" content="https://portfolio-yanmatheus.vercel.app/og-image.png" />
 </head>
-<body class="bg-white dark:bg-[#080808] antialiased">
+<body class="bg-white dark:bg-zinc-950 antialiased">
 
 
 <!-- NAV -->
@@ -44,6 +63,8 @@
                   <li><a href="./hire.html" class="relative block px-2.5 py-2 sm:px-3 transition hover:text-teal-500 dark:hover:text-teal-400">Hire</a></li>
                 </ul>
               </nav>
+              <a href="./en/about.html" aria-label="Switch to English"
+                class="pointer-events-auto flex h-9 items-center justify-center rounded-full bg-white/90 px-3 text-xs font-bold tracking-wide text-zinc-600 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur-md dark:bg-zinc-900/90 dark:text-zinc-300 dark:ring-white/10 transition-all hover:text-teal-500 hover:ring-teal-500/30 dark:hover:text-teal-400">EN</a>
               <button id="theme-toggle" class="pointer-events-auto flex h-9 w-9 items-center justify-center rounded-full bg-white/90 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur-md dark:bg-zinc-900/90 dark:ring-white/10 transition-colors" aria-label="Alternar tema">
                 <svg class="hidden dark:block h-5 w-5 stroke-zinc-500" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
                 <svg class="block dark:hidden h-5 w-5 stroke-zinc-500" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -55,8 +76,8 @@
     </div>
   </header>
 
-<div class="w-full dark:bg-[#080808] bg-white min-h-screen relative">
-  <div class="absolute inset-0 dark:bg-[#080808] bg-white dark:bg-dot-white bg-dot-black pointer-events-none"></div>
+<div class="w-full dark:bg-zinc-950 bg-white min-h-screen relative">
+  <div class="absolute inset-0 dark:bg-zinc-950 bg-white dark:bg-dot-white bg-dot-black pointer-events-none"></div>
   <div class="relative z-10">
 
   <!-- CONTENT -->
@@ -85,7 +106,7 @@
             <div class="lg:order-first lg:row-span-2 page-intro fade-up">
               <div class="page-eyebrow mb-5">About</div>
               <h1 class="text-balance text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-                Construo solucoes confiaveis na intersecao entre infraestrutura, automacao e software.
+                Construo aplicações web, desktop e mobile de ponta a ponta — da arquitetura ao deploy.
               </h1>
               <div class="mt-6 space-y-7 text-base leading-8 text-zinc-600 dark:text-zinc-400">
                 <p>
@@ -95,27 +116,28 @@
                   algoritmos e arquiteturas com profundidade.
                 </p>
                 <p>
-                  Minha experiência profissional começou no Tribunal Regional do Trabalho da 8ª Região,
-                  onde atuei como estagiário de TI por dois anos. Lá aprendi o valor do suporte
-                  técnico de qualidade: resolver problemas rápido, comunicar com clareza e entender
-                  que por trás de cada chamado existe uma pessoa que precisa trabalhar.
+                  Minha trajetória começou pela infraestrutura: dois anos como estagiário de TI no
+                  Tribunal Regional do Trabalho da 8ª Região, dando suporte a cerca de 500 usuários, e
+                  depois na Amazon Informática, criando automações com Python e AutoIt, integrações com
+                  GLPI e administrando ambientes Microsoft 365. Essa base me ensinou a construir
+                  software que precisa funcionar em operação real — e que reduz trabalho manual de verdade.
                 </p>
                 <p>
-                  Depois, na Amazon Informática, assumi responsabilidades maiores: administração de
-                  servidores Windows e Linux, configuração de redes (DHCP, DNS), implementação de
-                  melhorias de segurança e criação de automações com Python e AutoIt. Aprendi a
-                  construir ferramentas que realmente reduzem o trabalho manual — e que escalam.
+                  Hoje atuo como desenvolvedor full-stack, cuidando de todo o ciclo de vida de sistemas
+                  em produção — do levantamento de requisitos à arquitetura, deploy e suporte. Isso
+                  inclui integrações com as APIs fiscais brasileiras (SEFAZ) para emissão de NF-e,
+                  CT-e e MDF-e — um domínio que exige alta confiabilidade e conformidade regulatória.
                 </p>
                 <p>
-                  Hoje meu foco está na interseção entre infraestrutura de TI e desenvolvimento de
-                  software: automatizar processos, integrar sistemas e construir soluções robustas que
-                  equipes possam depender. Acredito que a melhor tecnologia é aquela invisível — que
-                  simplesmente funciona, sempre.
+                  Também desenvolvi de forma independente o aplicativo mobile Eletransol, hoje em uso
+                  em produção, e preparo o lançamento dele como app multiplataforma na App Store e no
+                  Google Play. Minha stack principal: TypeScript, React, Node.js, PostgreSQL, Docker e Electron.
                 </p>
                 <p>
-                  Fora do trabalho, contribuo com projetos open source, participo de hackathons e
-                  estudo continuamente — atualmente aprofundando conhecimentos em cloud, segurança
-                  da informação e desenvolvimento full stack moderno.
+                  Fora do trabalho, contribuo com projetos open source, participo de hackathons — fui
+                  3º lugar no Amazon Hacking 2025 como Lead Developer, em competição apoiada por Vale,
+                  Accenture e Wipro — e estudo continuamente, hoje aprofundando desenvolvimento mobile
+                  e francês (meta TCF/TEF).
                 </p>
               </div>
             </div>
@@ -167,13 +189,12 @@
                     <span class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Amazon Informática — Belém, PA</span>
                     <span class="mono text-xs text-zinc-400 dark:text-zinc-500 bg-zinc-100 dark:bg-white/5 px-2 py-0.5 rounded-md">Ago 2025 – Jan 2026</span>
                   </div>
-                  <p class="text-sm text-teal-600 dark:text-teal-400 mb-3 font-medium">Analista de Suporte Computacional e Infraestrutura</p>
+                  <p class="text-sm text-teal-600 dark:text-teal-400 mb-3 font-medium">Analista de Suporte Computacional e Automação</p>
                   <ul class="space-y-1.5 text-sm text-zinc-600 dark:text-zinc-400">
-                    <li class="flex gap-2"><span class="text-teal-500 flex-shrink-0">›</span>Administração e monitoramento de servidores Windows e Linux e serviços de rede (DHCP, DNS).</li>
-                    <li class="flex gap-2"><span class="text-teal-500 flex-shrink-0">›</span>Implementação de melhorias de performance e segurança em infraestrutura de TI.</li>
-                    <li class="flex gap-2"><span class="text-teal-500 flex-shrink-0">›</span>Criação de automações com Python e AutoIt, incluindo RPAs para redução de erros operacionais.</li>
-                    <li class="flex gap-2"><span class="text-teal-500 flex-shrink-0">›</span>Desenvolvimento de ferramentas internas para integração com GLPI e Microsoft 365.</li>
-                    <li class="flex gap-2"><span class="text-teal-500 flex-shrink-0">›</span>Manutenção preventiva e corretiva de softwares e sistemas corporativos.</li>
+                    <li class="flex gap-2"><span class="text-teal-500 flex-shrink-0">›</span>Scripts Python para geração automatizada de relatórios e integração de dados com GLPI, reduzindo em ~35% o tempo de processamento manual.</li>
+                    <li class="flex gap-2"><span class="text-teal-500 flex-shrink-0">›</span>Soluções de RPA com Python e AutoIt para otimização de processos internos e redução de erros operacionais.</li>
+                    <li class="flex gap-2"><span class="text-teal-500 flex-shrink-0">›</span>Administração de ambientes Microsoft 365 (Intune, gestão de endpoints).</li>
+                    <li class="flex gap-2"><span class="text-teal-500 flex-shrink-0">›</span>Melhorias de performance e segurança em infraestrutura de TI.</li>
                   </ul>
                 </div>
               </div>
@@ -233,6 +254,31 @@
                 <p class="mt-1 text-xs text-zinc-500 dark:text-zinc-400">Microsoft · Concluído em 08/2025</p>
                 <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">Administração de Endpoints, Microsoft 365, Windows Client, Microsoft Intune.</p>
               </div>
+              <div class="group relative flex flex-col items-start rounded-xl border border-zinc-100 p-5 dark:border-zinc-700/40 transition hover:border-teal-500/30 dark:hover:border-teal-400/30">
+                <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Análise e Visualização de Dados com Python</h3>
+                <p class="mt-1 text-xs text-zinc-500 dark:text-zinc-400">Microsoft · Concluído em 2026</p>
+                <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">Análise de dados, visualização e bibliotecas do ecossistema Python.</p>
+              </div>
+              <div class="group relative flex flex-col items-start rounded-xl border border-zinc-100 p-5 dark:border-zinc-700/40 transition hover:border-teal-500/30 dark:hover:border-teal-400/30">
+                <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">SQL Foundations</h3>
+                <p class="mt-1 text-xs text-zinc-500 dark:text-zinc-400">Microsoft · Concluído em 2026</p>
+                <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">Fundamentos de SQL, modelagem e consulta de bancos de dados relacionais.</p>
+              </div>
+              <div class="group relative flex flex-col items-start rounded-xl border border-zinc-100 p-5 dark:border-zinc-700/40 transition hover:border-teal-500/30 dark:hover:border-teal-400/30">
+                <h3 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Excel &amp; Copilot Fundamentals</h3>
+                <p class="mt-1 text-xs text-zinc-500 dark:text-zinc-400">Microsoft · Concluído em 2026</p>
+                <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">Produtividade com Excel e uso de IA (Copilot) em fluxos de trabalho.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Idiomas -->
+          <div class="mt-16 border-t border-zinc-100 dark:border-zinc-700/40 pt-16">
+            <h2 class="section-rule text-sm font-semibold mb-8">Idiomas</h2>
+            <div class="flex flex-wrap gap-3">
+              <span class="rounded-full border border-zinc-200 dark:border-zinc-700/60 px-4 py-2 text-sm text-zinc-700 dark:text-zinc-300"><strong class="font-semibold">Português</strong> · nativo</span>
+              <span class="rounded-full border border-zinc-200 dark:border-zinc-700/60 px-4 py-2 text-sm text-zinc-700 dark:text-zinc-300"><strong class="font-semibold">Inglês</strong> · proficiência profissional</span>
+              <span class="rounded-full border border-zinc-200 dark:border-zinc-700/60 px-4 py-2 text-sm text-zinc-700 dark:text-zinc-300"><strong class="font-semibold">Francês</strong> · básico, em estudo (meta TCF/TEF)</span>
             </div>
           </div>
 
@@ -256,7 +302,7 @@
                   <a href="./uses.html" class="transition hover:text-teal-500 dark:hover:text-teal-400">Uses</a>
                   <a href="./hire.html" class="transition hover:text-teal-500 dark:hover:text-teal-400">Hire</a>
                 </div>
-                <p class="text-sm text-zinc-400 dark:text-zinc-500">© 2025 Yan Matheus. Todos os direitos reservados.</p>
+                <p class="text-sm text-zinc-400 dark:text-zinc-500">© 2026 Yan Matheus. Todos os direitos reservados.</p>
               </div>
             </div>
           </div>
